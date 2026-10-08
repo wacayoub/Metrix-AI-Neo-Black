@@ -1,0 +1,8 @@
+{
+  "version": "0.3.0",
+  "script": "releases/0.3.0/Metrix_AI_Neo_Black_Apply_v3.py",
+  "sha256": "37d093bc868e6495912e57915279411f873fa42ab1dd3f1a49d3f3f18ecae6b9",
+  "image": "openatv-8.0.1",
+  "device": "vuzero4k",
+  "summary": "Metrix AI Neo Black V3: graphite/navy selection and improved readability."
+}
