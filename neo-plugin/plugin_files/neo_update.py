@@ -150,11 +150,12 @@ def enable_daily():
         if proc.returncode not in (0,1): raise UpdateError('Cannot read user crontab')
         STATE_DIR.mkdir(parents=True,exist_ok=True)
         _write_bytes(STATE_DIR/'crontab-before.txt',cron.encode('utf-8'))
-        jobs=[line for line in cron.splitlines() if '# metrix-neo-ai-daily' not in line]
+        jobs=[line for line in cron.splitlines() if '# metrix-neo-ai-daily' not in line and '# metrix-neo-auto-update' not in line]
         jobs.append('37 12 * * * /usr/bin/python3 '+str(DEST/'neo_update.py')+' auto >> /home/root/metrix-neo-ai-update.log 2>&1 # metrix-neo-ai-daily')
         changed='\n'.join(jobs)+'\n'
         subprocess.run(['crontab','-'],input=changed,text=True,timeout=10,check=True)
         notify('Daily standby-only update registered: 12:37 local receiver time')
+        if '# metrix-neo-auto-update' in cron: notify('Legacy V3 daily schedule disabled (files and backups preserved)')
     except Exception as e:
         notify('Daily scheduler not available: '+str(e))
 
