@@ -2,8 +2,8 @@
   "device": "vuzero4k",
   "files": {
     "__init__.py": "e45434b3fdab3dad95a63fdd3a1a7abac5d70073d3f57f8c0555592cfd94a2aa",
-    "neo_engine.py": "70ba3afb38911da6f1c9389fee7fc83bee3fa084255b8eac05d64f5168ca56b2",
-    "neo_update.py": "6f055da9c83f59ed50a6e75750f7b426760f6c4cb4699a4338c325bac3e453e2",
+    "neo_engine.py": "0e8f09bebc713ae390dd15b1117c7af28cf67145a1f8ce2186a413e78979c2b4",
+    "neo_update.py": "3acebe79e858616ad43837d06766835f57305344c5d929109cb0fd07de5ca062",
     "plugin.py": "b6e29ebb53541f7beb4a3ce86fa709e7eca064868afd30595f03da0f0beae2b7"
   },
   "image": "openatv-8.0.1",
