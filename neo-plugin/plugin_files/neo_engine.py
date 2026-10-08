@@ -31,19 +31,19 @@ PALETTES = {
 
 # (MyMetrixLite config role, generated skin name, alpha byte, palette key)
 FIELDS = [
-    ('layerabackground', 'layer-a-background', '23', 'base'),
-    ('layerbbackground', 'layer-b-background', '23', 'secondary'),
+    ('layerabackground', 'layer-a-background', '1A', 'base'),
+    ('layerbbackground', 'layer-b-background', '1A', 'secondary'),
     ('layeraselectionbackground', 'layer-a-selection-background', '00', 'selection'),
-    ('menusymbolbackground', 'menusymbolbackground', '12', 'base'),
-    ('menubackground', 'menubackground', '23', 'base'),
-    ('infobarbackground', 'infobarbackground', '18', 'base'),
+    ('menusymbolbackground', 'menusymbolbackground', '0D', 'base'),
+    ('menubackground', 'menubackground', '1A', 'base'),
+    ('infobarbackground', 'infobarbackground', '1A', 'base'),
     ('infobarprogress', 'infobarprogress', '00', 'progress'),
     ('layeraprogress', 'layer-a-progress', '00', 'progress'),
     ('layeraunderline', 'layer-a-underline', '00', 'accent'),
-    ('epgbackground', 'epg-background', '23', 'base'),
+    ('epgbackground', 'epg-background', '1A', 'base'),
     ('epgeventselectedbackground', 'epg-event-selected-background', '00', 'selection'),
-    ('epgservicenowbackground', 'epg-service-now-background', '18', 'secondary'),
-    ('epgeventdescriptionbackground', 'epg-eventdescription-background', '18', 'secondary'),
+    ('epgservicenowbackground', 'epg-service-now-background', '1A', 'secondary'),
+    ('epgeventdescriptionbackground', 'epg-eventdescription-background', '1A', 'secondary'),
 ]
 FONT_FIELDS = [('globaltitle_type', 'global_title', FONT_RALEWAY), ('globalmenu_type', 'global_menu', FONT_RALEWAY)]
 GRADIENTS = { 'layer-a-background_gradient': ('base','50','18'), 'infobarbackground_gradient': ('base','48','14'), 'epg-background_gradient': ('base','50','18') }
