@@ -16,9 +16,9 @@ EPG data, or Enigma2 core files.
 - Native MyMetrixLite remains present; if the user runs *Apply Changes* there,
   it regenerates its own XML. The separate plugin will detect the change and
   refuse destructive restoration until the user reviews it.
-- If a previous Metrix Neo color updater is scheduled, disable that old cron
-  to avoid a competing automatic change. This plugin never modifies the
-  previous updater automatically.
+- The first install replaces only the legacy `# metrix-neo-auto-update` cron
+  entry to avoid parallel color modifications. It saves a copy of the old
+  crontab, preserves unrelated jobs, and leaves older updater files/backups in place.
 
 ## First installation, no IPK
 
@@ -49,8 +49,9 @@ GUI restart. The update is verified using SHA-256 from `manifest.json`.
 ## Compatibility note
 
 The previously published V3 CLI updater (`/home/root/metrix_neo_updater.py`)
-is a distinct legacy path and is not required for this new plugin. To avoid
-conflicts, disable its scheduling if enabled:
+is a distinct legacy path and is not required for this new plugin. The new
+installer disables its marked cron schedule automatically. If there was an
+unmarked custom schedule, it can be disabled separately with:
 
 ```sh
 python3 /home/root/metrix_neo_updater.py auto-off
