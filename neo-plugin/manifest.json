@@ -1,10 +1,10 @@
 {
   "device": "vuzero4k",
   "files": {
-    "__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
-    "neo_engine.py": "a97a1dad2134879672d5468ed6f0b7b9e629123ed36b071aeadae4b514b5f187",
-    "neo_update.py": "8adb3f0da02aa76af6c5cb690636b5192849b502d7ec813de0bfed500947b7f5",
-    "plugin.py": "9cb5caab7bfee729af91600f7cfa286179ca074b29fc1ca98fdedb76950e0a81"
+    "__init__.py": "e45434b3fdab3dad95a63fdd3a1a7abac5d70073d3f57f8c0555592cfd94a2aa",
+    "neo_engine.py": "70ba3afb38911da6f1c9389fee7fc83bee3fa084255b8eac05d64f5168ca56b2",
+    "neo_update.py": "6f055da9c83f59ed50a6e75750f7b426760f6c4cb4699a4338c325bac3e453e2",
+    "plugin.py": "b6e29ebb53541f7beb4a3ce86fa709e7eca064868afd30595f03da0f0beae2b7"
   },
   "image": "openatv-8.0.1",
   "summary": "Independent Metrix Neo AI plugin with Black/Blue/Violet profiles, reversible appearance, online updates and guarded auto-checks",
