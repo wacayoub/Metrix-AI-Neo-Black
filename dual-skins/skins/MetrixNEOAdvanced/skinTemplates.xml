@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template component="serviceList" name="NEO" screens="ChannelSelectionDefault,ChannelSelectionPIG,ChannelSelectionFull" fonts="Regular;20,Regular;21,Regular;21">
+    <mode name="services" itemHeight="38" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,38" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,38" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,36" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,37" size="914,1" backgroundColor="row_line" />
+      <text index="Number" position="14,0" size="45,38" font="2" verticalAlignment="center" horizontalAlignment="center" />
+      <pixmap index="Picon" position="84,3" size="70,32" alpha="blend" scale="centerScaled" />
+      <text index="ServiceName" position="176,0" size="126,38" font="0" verticalAlignment="center" wrap="ellipsis" recordColor="red" />
+      <rectangle position="310,9" size="1,20" backgroundColor="line_bright" />
+      <text index="Title1" position="340,0" size="436,38" font="1" verticalAlignment="center" wrap="ellipsis" foregroundColor="epg" foregroundColorSelected="foreground" />
+      <progress index="Progress" position="794,13" size="78,12" borderWidth="0" foregroundColor="accent" foregroundColorSelected="foreground" backgroundColor="track" cornerRadius="2" />
+    </mode>
+    <mode name="bouquets" itemHeight="38" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,38" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,38" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,36" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,37" size="914,1" backgroundColor="row_line" />
+      <text index="Number" position="14,0" size="45,38" font="2" verticalAlignment="center" horizontalAlignment="center" />
+      <pixmap index="Picon" position="84,3" size="70,32" alpha="blend" scale="centerScaled" />
+      <text index="ServiceName" position="176,0" size="126,38" font="0" verticalAlignment="center" wrap="ellipsis" recordColor="red" />
+      <rectangle position="310,9" size="1,20" backgroundColor="line_bright" />
+      <text index="Title1" position="340,0" size="436,38" font="1" verticalAlignment="center" wrap="ellipsis" foregroundColor="epg" foregroundColorSelected="foreground" />
+      <progress index="Progress" position="794,13" size="78,12" borderWidth="0" foregroundColor="accent" foregroundColorSelected="foreground" backgroundColor="track" cornerRadius="2" />
+    </mode>
+    <mode name="other" itemHeight="38" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,38" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,38" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,36" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,37" size="914,1" backgroundColor="row_line" />
+      <text index="EntryName" position="18,0" size="878,38" font="0" verticalAlignment="center" wrap="ellipsis" />
+    </mode>
+  </template>
+  <template component="serviceList" name="NEO Compact" screens="ChannelSelectionDefault,ChannelSelectionPIG,ChannelSelectionFull" fonts="Regular;20,Regular;21,Regular;21">
+    <mode name="services" itemHeight="34" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,34" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,34" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,32" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,33" size="914,1" backgroundColor="row_line" />
+      <text index="Number" position="14,0" size="45,34" font="2" verticalAlignment="center" horizontalAlignment="center" />
+      <pixmap index="Picon" position="84,3" size="70,28" alpha="blend" scale="centerScaled" />
+      <text index="ServiceName" position="176,0" size="126,34" font="0" verticalAlignment="center" wrap="ellipsis" recordColor="red" />
+      <rectangle position="310,9" size="1,16" backgroundColor="line_bright" />
+      <text index="Title1" position="340,0" size="436,34" font="1" verticalAlignment="center" wrap="ellipsis" foregroundColor="epg" foregroundColorSelected="foreground" />
+      <progress index="Progress" position="794,11" size="78,12" borderWidth="0" foregroundColor="accent" foregroundColorSelected="foreground" backgroundColor="track" cornerRadius="2" />
+    </mode>
+    <mode name="bouquets" itemHeight="34" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,34" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,34" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,32" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,33" size="914,1" backgroundColor="row_line" />
+      <text index="Number" position="14,0" size="45,34" font="2" verticalAlignment="center" horizontalAlignment="center" />
+      <pixmap index="Picon" position="84,3" size="70,28" alpha="blend" scale="centerScaled" />
+      <text index="ServiceName" position="176,0" size="126,34" font="0" verticalAlignment="center" wrap="ellipsis" recordColor="red" />
+      <rectangle position="310,9" size="1,16" backgroundColor="line_bright" />
+      <text index="Title1" position="340,0" size="436,34" font="1" verticalAlignment="center" wrap="ellipsis" foregroundColor="epg" foregroundColorSelected="foreground" />
+      <progress index="Progress" position="794,11" size="78,12" borderWidth="0" foregroundColor="accent" foregroundColorSelected="foreground" backgroundColor="track" cornerRadius="2" />
+    </mode>
+    <mode name="other" itemHeight="34" foregroundColor="foreground" foregroundColorSelected="foreground" backgroundColor="panel" backgroundColorSelected="selection">
+      <rectangle position="0,0" size="914,34" backgroundColor="panel" backgroundColorSelected="panel" />
+      <rectangle position="2,0" size="910,34" backgroundColor="panel" backgroundColorSelected="row_selection_rim" cornerRadius="7" />
+      <rectangle position="3,1" size="908,32" foregroundGradient="panel,panel,vertical" foregroundGradientSelected="row_selected_top,row_selected_mid,row_selected_bottom,vertical" cornerRadius="6" />
+      <rectangle position="10,0" size="894,1" backgroundColor="panel" backgroundColorSelected="row_selection_highlight" />
+      <rectangle position="0,33" size="914,1" backgroundColor="row_line" />
+      <text index="EntryName" position="18,0" size="878,34" font="0" verticalAlignment="center" wrap="ellipsis" />
+    </mode>
+  </template>
+</templates>

@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-25",
+  "audio": {
+    "profiles": [
+      "MetrixNEO",
+      "MetrixNEOAdvanced"
+    ],
+    "status": "USER_VISUALLY_APPROVED",
+    "evidence": "Super, on valide le menu audio pour les deux thèmes.",
+    "palette": "Metrix NEO"
+  },
+  "subtitles": {
+    "profiles": [
+      "MetrixNEO",
+      "MetrixNEOAdvanced"
+    ],
+    "status": "USER_VISUALLY_APPROVED",
+    "evidence": "Super, on valide les sous-titres pour les deux thèmes.",
+    "palette": "Metrix NEO"
+  },
+  "timers": {
+    "profiles": [
+      "MetrixNEO",
+      "MetrixNEOAdvanced"
+    ],
+    "status": "USER_VISUALLY_APPROVED",
+    "evidence": "Super, on valide les programmations pour les deux thèmes.",
+    "palette": "Metrix NEO"
+  },
+  "remaining_menus": {
+    "profiles": [
+      "MetrixNEO",
+      "MetrixNEOAdvanced"
+    ],
+    "status": "USER_VISUALLY_APPROVED",
+    "scope": "Screens defined by the skins; third-party native fallback windows excluded",
+    "views": 28,
+    "evidence": "Super, on valide tous les menus pour les deux thèmes."
+  },
+  "receiver_access": false,
+  "hardware_tests": "NOT_PERFORMED",
+  "installation_authorized": false,
+  "overall_status": "ALL_MENUS_USER_VISUALLY_APPROVED",
+  "approval_evidence": "Super, on valide tous les menus pour les deux thèmes."
+}

@@ -1,0 +1,21 @@
+MetrixHD technical base and attribution
+=====================================
+Original skin: iMaxxx.
+MetrixHD v3.0: openATV Team.
+Source: https://github.com/openatv/MetrixHD
+Reviewed commit: e061de22c38ffd8c70078e1e6ac481d27291b9de
+Notice location: usr/share/enigma2/MetrixHD/skinfiles/skin_base.xml
+
+Original notice preserved verbatim:
+"Explicitly, no one is allowed to use any version of the Skin with other team Images"
+"You can modify and redistribute it as long as you keep this license and the original author for the skin and all of your modifications"
+
+NEO skin modifications: Metrix NEO contributors, 2026.
+Modified structure: independent FHD layouts, new palette, original procedural
+assets, optional enrichment adapters and native menu bindings.
+The NEO skin XML is distributed for OpenATV only, preserving this notice.
+This is a custom upstream notice, not an MIT/GPL grant for MetrixHD artwork.
+Do not remove the upstream authors or the OpenATV-only restriction.
+No upstream logos, photos or MetrixHD Python modules are bundled.
+The unmodified Raleway-Light.ttf font is bundled in NEO under its separate
+SIL Open Font License 1.1; see Raleway-Light-OFL.txt for authors and terms.

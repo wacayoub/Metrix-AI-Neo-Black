@@ -1,0 +1,25 @@
+{
+  "result": "PASS_LOCAL_HARDWARE_UNVERIFIED",
+  "native_class": "SubtitleSelection",
+  "native_skin": "AudioSelection",
+  "page": "subtitles",
+  "profiles": [
+    "MetrixNEO",
+    "MetrixNEOAdvanced"
+  ],
+  "preview_states": [
+    "active",
+    "inactive",
+    "empty",
+    "config"
+  ],
+  "palette": "METRIX_NEO",
+  "icon_switch": "SCREEN_LOCAL_CONFIG_NOTIFIER",
+  "cleanup": "NOTIFIER_REMOVED_ON_RENDERER_DESTRUCTION",
+  "tests": 152,
+  "static_checks": 4784,
+  "audio_preview_pngs": "FOUR_BYTE_IDENTICAL_TO_USER_APPROVED",
+  "user_visual_validation": "APPROVED_BOTH_THEMES",
+  "receiver_access": false,
+  "hardware_tests": "NOT_PERFORMED"
+}

@@ -1,0 +1,82 @@
+<section id="__ROOT__" class="metrix-screen-review" aria-label="__TITLE__">
+  <h2>__TITLE__</h2>
+  <div class="viz-controls">
+    <label class="form-label">Écran
+      <select class="form-select" data-screen aria-label="Écran à comparer">__OPTIONS__</select>
+    </label>
+    <label class="form-label">Cadrage
+      <select class="form-select" data-view aria-label="Cadrage des deux skins">
+        <option value="full">Écran complet</option>
+        <option value="detail">Zone utile agrandie</option>
+      </select>
+    </label>
+  </div>
+  <div class="metrix-screen-caption text-small text-muted" data-caption aria-live="polite">Simulation XML · données d’exemple</div>
+  <div class="metrix-screen-grid">
+    <figure>
+      <figcaption>Metrix NEO</figcaption>
+      <svg data-side="neo" role="img" aria-label="Simulation du skin Metrix NEO" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMin meet">
+        <image width="1920" height="1080"/>
+      </svg>
+      <p class="text-small" data-unavailable="neo" hidden>Cette catégorie est réservée au skin Advanced.</p>
+    </figure>
+    <figure>
+      <figcaption>Metrix NEO Advanced</figcaption>
+      <svg data-side="advanced" role="img" aria-label="Simulation du skin Metrix NEO Advanced" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMin meet">
+        <image width="1920" height="1080"/>
+      </svg>
+      <p class="text-small" data-unavailable="advanced" hidden>Cette catégorie n’est pas proposée dans ce skin.</p>
+    </figure>
+  </div>
+</section>
+<style>
+#__ROOT__{color:var(--foreground);margin:0 0 24px}
+#__ROOT__ h2{font-weight:500;margin:0 0 12px}
+#__ROOT__ .metrix-screen-caption{margin:10px 0}
+#__ROOT__ .metrix-screen-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+#__ROOT__ figure{margin:0;min-width:0}
+#__ROOT__ figcaption{font-weight:500;margin:0 0 8px}
+#__ROOT__ svg{display:block;width:100%;height:auto;overflow:hidden}
+@media(max-width:540px){#__ROOT__ .metrix-screen-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{
+  const root=document.getElementById('__ROOT__');
+  const config=__CONFIG__;
+  const screen=root.querySelector('[data-screen]');
+  const view=root.querySelector('[data-view]');
+  function apply(screenKey,viewKey){
+    if(!Object.hasOwn(config.screens,screenKey))screenKey=config.defaultScreen;
+    if(!['full','detail'].includes(viewKey))viewKey=config.defaultView;
+    const item=config.screens[screenKey];
+    screen.value=screenKey;
+    view.value=viewKey;
+    const box=viewKey==='full'?[0,0,1920,1080]:item.detail;
+    for(const side of ['neo','advanced']){
+      const svg=root.querySelector('svg[data-side="'+side+'"]');
+      svg.hidden=!item[side];
+      svg.style.display=item[side]?'block':'none';
+      root.querySelector('[data-unavailable="'+side+'"]').hidden=Boolean(item[side]);
+      svg.setAttribute('viewBox',box.join(' '));
+      svg.style.aspectRatio=box[2]+' / '+box[3];
+      svg.setAttribute('aria-label',(side==='neo'?'Metrix NEO':'Metrix NEO Advanced')+' · '+item.label+' · simulation');
+      if(item[side])svg.querySelector('image').setAttribute('href',item[side]);
+    }
+    root.querySelector('[data-caption]').textContent=item.caption;
+  }
+  function restore(state){
+    const saved=state?.modelContent||{};
+    apply(saved.category===config.category?saved.screen:config.defaultScreen,saved.category===config.category?saved.view:config.defaultView);
+  }
+  function change(){
+    apply(screen.value,view.value);
+    if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState({modelContent:{category:config.category,screen:screen.value,view:view.value},privateContent:null})).catch(()=>{});
+  }
+  screen.addEventListener('change',change);
+  view.addEventListener('change',change);
+  restore(window.openai?.widgetState);
+  window.addEventListener('openai:set_globals',event=>{
+    if(event.detail?.globals?.widgetState)restore(event.detail.globals.widgetState);
+  });
+})();
+</script>

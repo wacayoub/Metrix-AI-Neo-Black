@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "date": "2026-10-25",
+  "source": "https://www.thesportsdb.com",
+  "endpoint": "/api/v1/json/123/searchteams.php",
+  "metadata": [
+    {"query": "Real Madrid", "result": "PASS", "id": "133738", "name": "Real Madrid", "png_valid": true, "image_bytes": 57824},
+    {"query": "Barcelona", "result": "PASS", "id": "133739", "name": "Barcelona", "png_valid": true, "image_bytes": 37141}
+  ],
+  "image_downloads": 2,
+  "images_saved": 0,
+  "execution": "PC: private read-only provider check, not the Enigma2 runtime",
+  "receiver_access": false,
+  "hardware_rendering": "NOT_PERFORMED",
+  "license_note": "No club image redistributed in packages or source bundle"
+}

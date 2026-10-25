@@ -1,0 +1,13 @@
+.upstream/
+.codex-remote-attachments/
+.codex-attachments/
+__pycache__/
+*.py[cod]
+.venv/
+.env*
+dist/
+build/
+*.ipk
+*.log
+references/
+!references/README.md

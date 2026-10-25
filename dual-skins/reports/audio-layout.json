@@ -1,0 +1,46 @@
+{
+  "result": "PASS_LOCAL_HARDWARE_UNVERIFIED",
+  "reference": {
+    "file": "codex-clipboard-7f35d0c5-8359-446a-9873-12776908a9ba.png",
+    "sha256": "40dc01f136b704d003352d4c95ecc350bb2d7b699bea9d404e3de0dc2c586551",
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  "profiles": [
+    "MetrixNEO",
+    "MetrixNEOAdvanced"
+  ],
+  "native_screen": "AudioSelection",
+  "visible_config_rows": 7,
+  "stream_fields": [
+    "number",
+    "description",
+    "language",
+    "selected"
+  ],
+  "focus_states": [
+    "config",
+    "streams"
+  ],
+  "tests": 152,
+  "static_checks": 4784,
+  "receiver_access": false,
+  "hardware_tests": "NOT_PERFORMED",
+  "video_preview": "PROCEDURAL_ILLUSTRATION_NOT_PACKAGED",
+  "palette": {
+    "audio_panel": "18031323",
+    "audio_ink": "E9F0F8",
+    "audio_selection": "084B9C",
+    "audio_rule": "11B8EF",
+    "audio_button_ink": "E9F0F8",
+    "audio_red": "F02C2C",
+    "audio_green": "23CD38",
+    "audio_yellow": "F2D936",
+    "audio_blue": "119BE6"
+  },
+  "selection_gradients": "PROFILE_NATIVE_MENU_PALETTE",
+  "user_visual_validation": "APPROVED_BOTH_THEMES",
+  "approved_preview_pngs": "FOUR_BYTE_IDENTICAL"
+}
