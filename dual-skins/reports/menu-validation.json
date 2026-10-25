@@ -1,0 +1,477 @@
+{
+  "result": "REVIEW_READY_NOT_USER_APPROVED",
+  "native_identities": 40,
+  "views": 34,
+  "receiver_access": false,
+  "hardware_validation": "NOT_PERFORMED",
+  "limitations": [
+    "Les rangées natives secondaires et le clavier sont illustratifs, pas un moteur Enigma2.",
+    "Les alias sont regroupés par présentation ; leurs callbacks ne sont pas validés par les images.",
+    "Les fenêtres spécifiques AutoTimer, NetworkOverview et plugins tiers conservent leur repli natif ; elles ne sont pas toutes redessinées."
+  ],
+  "screens": [
+    {
+      "key": "menu_mainmenu",
+      "label": "Menu principal",
+      "group": "navigation",
+      "group_title": "Menus et plugins",
+      "native_screen": "menu_mainmenu",
+      "aliases": [
+        "Menumainmenu"
+      ],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-menu_mainmenu.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-menu_mainmenu.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "Menu",
+      "label": "Menu natif complet / sous-menu",
+      "group": "navigation",
+      "group_title": "Menus et plugins",
+      "native_screen": "Menu",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-Menu.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-Menu.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "PluginBrowser-list",
+      "label": "Plugins · liste",
+      "group": "navigation",
+      "group_title": "Menus et plugins",
+      "native_screen": "PluginBrowser",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-PluginBrowser-list.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-PluginBrowser-list.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "PluginBrowser-grid",
+      "label": "Plugins · grille",
+      "group": "navigation",
+      "group_title": "Menus et plugins",
+      "native_screen": "PluginBrowser",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-PluginBrowser-grid.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-PluginBrowser-grid.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "ChannelContextMenu",
+      "label": "Menu contextuel · 15 lignes",
+      "group": "contextes",
+      "group_title": "Contextes et confirmations",
+      "native_screen": "ChannelContextMenu",
+      "aliases": [
+        "EventViewContextMenu",
+        "EventViewContextMenuChoiceBox"
+      ],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-ChannelContextMenu.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-ChannelContextMenu.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "ChoiceBox",
+      "label": "Choix d’une action",
+      "group": "contextes",
+      "group_title": "Contextes et confirmations",
+      "native_screen": "ChoiceBox",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-ChoiceBox.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-ChoiceBox.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "MessageBox",
+      "label": "Confirmation / message",
+      "group": "contextes",
+      "group_title": "Contextes et confirmations",
+      "native_screen": "MessageBox",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-MessageBox.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-MessageBox.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "Setup",
+      "label": "Paramètres système · extrait audio",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "Setup",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-Setup.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-Setup.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings",
+      "label": "Présentation",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-MetrixNEOSettings.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings-weather",
+      "label": "Météo",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-MetrixNEOSettings-weather.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings-weather.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings-images",
+      "label": "Images EPG et logos d’équipes",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-MetrixNEOSettings-images.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings-images.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings-smart",
+      "label": "Smart EPG · Advanced",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": null,
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings-smart.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings-diagnostics",
+      "label": "Diagnostics · Advanced",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": null,
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings-diagnostics.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "MetrixNEOSettings-cache",
+      "label": "Cache",
+      "group": "preferences",
+      "group_title": "Paramètres et préférences",
+      "native_screen": "MetrixNEOSettings",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-MetrixNEOSettings-cache.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-MetrixNEOSettings-cache.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "TimerOverview",
+      "label": "Programmations · vue générale",
+      "group": "programmations",
+      "group_title": "Programmations et enregistrements",
+      "native_screen": "TimerOverview",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-TimerOverview.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-TimerOverview.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "RecordTimerOverview",
+      "label": "Programmations d’enregistrement",
+      "group": "programmations",
+      "group_title": "Programmations et enregistrements",
+      "native_screen": "RecordTimerOverview",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-RecordTimerOverview.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-RecordTimerOverview.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "SchedulerOverview",
+      "label": "Planifications système",
+      "group": "programmations",
+      "group_title": "Programmations et enregistrements",
+      "native_screen": "SchedulerOverview",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-SchedulerOverview.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-SchedulerOverview.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "ConflictTimerOverview",
+      "label": "Conflit de programmations",
+      "group": "programmations",
+      "group_title": "Programmations et enregistrements",
+      "native_screen": "ConflictTimerOverview",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-ConflictTimerOverview.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-ConflictTimerOverview.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "MovieSelection",
+      "label": "Enregistrements / films",
+      "group": "programmations",
+      "group_title": "Programmations et enregistrements",
+      "native_screen": "MovieSelection",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-MovieSelection.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-MovieSelection.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "SubtitleSelection",
+      "label": "Sous-titres · sélection native",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "AudioSelection",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-SubtitleSelection.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-SubtitleSelection.png"
+      },
+      "caption": "Simulation XML · sélecteur natif AudioSelection en mode sous-titres · vidéo et pistes illustratives"
+    },
+    {
+      "key": "AudioSelection",
+      "label": "Pistes audio",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "AudioSelection",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-AudioSelection.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-AudioSelection.png"
+      },
+      "caption": "Simulation XML · vidéo et valeurs illustratives · IPAudio Pro seulement si fourni par une extension · langue réelle selon OpenATV"
+    },
+    {
+      "key": "Subtitles",
+      "label": "Sous-titres · repli configuration",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "Subtitles",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-Subtitles.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-Subtitles.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "InputBox",
+      "label": "Saisie d’un texte",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "InputBox",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-InputBox.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-InputBox.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "VirtualKeyboard",
+      "label": "Clavier virtuel",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "VirtualKeyboard",
+      "aliases": [
+        "VirtualKeyBoard"
+      ],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-VirtualKeyboard.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-VirtualKeyboard.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "Console",
+      "label": "Console · texte illustratif",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "Console",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-Console.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-Console.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "Volume",
+      "label": "Volume",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "Volume",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-Volume.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-Volume.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "Mute",
+      "label": "Son coupé",
+      "group": "utilitaires",
+      "group_title": "Audio, sous-titres et saisie",
+      "native_screen": "Mute",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-Mute.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-Mute.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "ChannelSelection",
+      "label": "Chaînes · image EPG",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "ChannelSelection",
+      "aliases": [
+        "ChannelSelectionDefault",
+        "ChannelSelectionPIG",
+        "ChannelSelectionFull",
+        "ChannelSelection_PIG"
+      ],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-ChannelSelection.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-ChannelSelection.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "ChannelSelectionText",
+      "label": "Chaînes · sans image EPG",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "ChannelSelection",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-ChannelSelectionText.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-ChannelSelectionText.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "InfoBar",
+      "label": "Infobar principale",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "InfoBar",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-InfoBar.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-InfoBar.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "SecondInfoBar",
+      "label": "Seconde infobar",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "SecondInfoBar",
+      "aliases": [],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-SecondInfoBar.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-SecondInfoBar.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "GraphicalEPG",
+      "label": "Guide EPG graphique",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "GraphicalEPG",
+      "aliases": [
+        "GraphicalEPGPIG",
+        "GraphicalInfoBarEPG"
+      ],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-GraphicalEPG.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-GraphicalEPG.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    },
+    {
+      "key": "EPGSelection",
+      "label": "Guide EPG liste / multi / rapide",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "EPGSelection",
+      "aliases": [
+        "EPGSelectionMulti",
+        "QuickEPG"
+      ],
+      "images": {
+        "MetrixNEO": "previews/review/MetrixNEO-EPGSelection.png",
+        "MetrixNEOAdvanced": "previews/review/MetrixNEOAdvanced-EPGSelection.png"
+      },
+      "caption": "Géométrie XML · rangées/clavier illustratifs · touches natives selon l’état et la configuration"
+    },
+    {
+      "key": "EventView",
+      "label": "Détails du programme",
+      "group": "television",
+      "group_title": "Chaînes, infobars et guides EPG",
+      "native_screen": "EventView",
+      "aliases": [
+        "EventViewSimple",
+        "InfoBarEventView"
+      ],
+      "images": {
+        "MetrixNEO": "previews/MetrixNEO-EventView.png",
+        "MetrixNEOAdvanced": "previews/MetrixNEOAdvanced-EventView.png"
+      },
+      "caption": "Simulation XML · données d’exemple"
+    }
+  ]
+}

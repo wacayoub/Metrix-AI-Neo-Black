@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-25",
+  "target": "OpenATV 8.0.1 / Vu+ Zero 4K (not inspected)",
+  "sources": [
+    {
+      "name": "MetrixHD",
+      "url": "https://github.com/openatv/MetrixHD",
+      "branch": "master",
+      "commit": "e061de22c38ffd8c70078e1e6ac481d27291b9de",
+      "role": "technical screen conventions, restricted OpenATV license notice and unchanged Raleway Light font bundled under SIL OFL 1.1; no upstream posters bundled"
+    },
+    {
+      "name": "Enigma2 OpenATV",
+      "url": "https://github.com/openatv/enigma2",
+      "branch": "8.0",
+      "commit": "2f041851ed8df9efbd51dd731925014289e5bb5e",
+      "role": "read-only API and source inventory, NOT proof of installed receiver build"
+    },
+    {
+      "name": "Existing user project",
+      "url": "https://github.com/wacayoub/Metrix-AI-Neo-Black",
+      "branch": "main",
+      "commit": "18ec2cfd3d9e97fc41fb889d81bc695961a5e6eb",
+      "role": "read-only legacy project audit; existing update feeds preserved; new code prepared under dual-skins/"
+    }
+  ],
+  "reference_zip": "NOT_RECEIVED",
+  "ssh": "NO_AUTHORIZED_CONNECTOR_AVAILABLE",
+  "visual_references": [
+    {
+      "image": 1,
+      "file": "1000514993.png",
+      "sha256": "f6ace0c43a87b010a612918ce478cfd22d58d93dc0732d88a4080b3ccae3d142",
+      "size": [
+        1280,
+        853
+      ]
+    },
+    {
+      "image": 2,
+      "file": "1000514994.png",
+      "sha256": "ee33d52c1d16718db3520a1decd84adb24ca73a542f8597b91d61e3a8bc4f45d",
+      "size": [
+        767,
+        330
+      ]
+    },
+    {
+      "image": 3,
+      "file": "1000514982.png",
+      "sha256": "d0834e9332582a17a82f9b0ff5161cbd21b17c59fca5d9831a1d1999766f5896",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "image": 4,
+      "file": "1000514981.png",
+      "sha256": "cc9dffb668d89faecd239c4fa6966c43e9a65904da7b4db10f96b4a2993bd14d",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ]
+}

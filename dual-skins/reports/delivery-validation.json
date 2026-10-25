@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "date": "2026-10-25",
+  "all_menus_user_visually_approved": true,
+  "approved_primary_previews_unchanged": true,
+  "original_git_index_unchanged": true,
+  "github_head_matches_audited_base": true,
+  "github_base": "18ec2cfd3d9e97fc41fb889d81bc695961a5e6eb",
+  "pinned_upstream_offline_check": "PASS",
+  "remote_ci": "NOT_EXECUTED",
+  "receiver_access": false,
+  "installation_authorized": false,
+  "hardware_tests": "NOT_PERFORMED"
+}

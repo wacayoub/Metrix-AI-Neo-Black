@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "packages": 4,
+  "owned_files": 296,
+  "scripts": 0,
+  "receiver_writes": 0,
+  "opkg_install": "NOT_PERFORMED"
+}

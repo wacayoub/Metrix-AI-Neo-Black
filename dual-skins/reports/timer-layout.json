@@ -1,0 +1,32 @@
+{
+  "result": "PASS_LOCAL_HARDWARE_UNVERIFIED",
+  "native_screens": [
+    "TimerOverview",
+    "RecordTimerOverview",
+    "SchedulerOverview",
+    "ConflictTimerOverview"
+  ],
+  "profiles": [
+    "MetrixNEO",
+    "MetrixNEOAdvanced"
+  ],
+  "preview_states": [
+    "planned",
+    "running",
+    "disabled",
+    "completed",
+    "empty",
+    "system",
+    "conflict"
+  ],
+  "palette": "METRIX_NEO",
+  "visible_rows": 8,
+  "row_height": 80,
+  "tests": 152,
+  "static_checks": 4784,
+  "audited_native_record_row_builder": "PASS_WITH_XML_GEOMETRY",
+  "approved_audio_subtitle_pngs_unchanged": 12,
+  "user_visual_validation": "APPROVED_BOTH_THEMES",
+  "receiver_access": false,
+  "hardware_tests": "NOT_PERFORMED"
+}

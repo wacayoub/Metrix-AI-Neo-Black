@@ -1,0 +1,166 @@
+{
+  "references": [
+    {
+      "image": 1,
+      "file": "1000514993.png",
+      "sha256": "f6ace0c43a87b010a612918ce478cfd22d58d93dc0732d88a4080b3ccae3d142",
+      "size": [
+        1280,
+        853
+      ]
+    },
+    {
+      "image": 2,
+      "file": "1000514994.png",
+      "sha256": "ee33d52c1d16718db3520a1decd84adb24ca73a542f8597b91d61e3a8bc4f45d",
+      "size": [
+        767,
+        330
+      ]
+    },
+    {
+      "image": 3,
+      "file": "1000514982.png",
+      "sha256": "d0834e9332582a17a82f9b0ff5161cbd21b17c59fca5d9831a1d1999766f5896",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "image": 4,
+      "file": "1000514981.png",
+      "sha256": "cc9dffb668d89faecd239c4fa6966c43e9a65904da7b4db10f96b4a2993bd14d",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "menu_advanced": "4 columns x 3 rows",
+  "channel_lists": "20 rows per latest reference",
+  "runtime_test": "NOT_PERFORMED",
+  "pixel_identity": "NOT_CLAIMED",
+  "refinement": {
+    "advanced_frame": [
+      24,
+      222,
+      1872,
+      633
+    ],
+    "advanced_menu_cell": [
+      340,
+      140
+    ],
+    "classic_frame": [
+      24,
+      286,
+      1872,
+      516
+    ],
+    "classic_menu_cell": [
+      362,
+      306
+    ],
+    "classic_list": [
+      24,
+      110,
+      1218,
+      900,
+      45
+    ],
+    "advanced_list": [
+      250,
+      178,
+      914,
+      760,
+      38
+    ],
+    "forecast_layout": "day / icon / temperature range, three columns",
+    "gradients": "native vertical three-stop, static lateral rim gradients",
+    "font_declared": "LiberationSans-Regular.ttf",
+    "font_preview": "LiberationSans-Regular.ttf from audited local Enigma2 clone",
+    "font_in_packages": false,
+    "photo_scaling": "native fill with aspect preserved",
+    "technical_columns": [
+      "measured video / codec",
+      "measured aspect / source",
+      "measured audio"
+    ],
+    "local_inspection": "menus, channel lists and contexts reviewed; no hardware comparison",
+    "palette_samples": {
+      "tile_top": [
+        11,
+        49,
+        84
+      ],
+      "tile_middle": [
+        8,
+        38,
+        65
+      ],
+      "tile_bottom": [
+        7,
+        32,
+        57
+      ]
+    },
+    "sample_note": "Median reference regions outside primary labels; no overall similarity percentage inferred."
+  },
+  "comparison_refinement": {
+    "scope": "native XML, assets and matching simulator; no hardware comparison",
+    "menu_advanced_fonts": {
+      "title": 20,
+      "description": 17
+    },
+    "icon_footprints": "per symbol and per profile, no forced equal silhouette",
+    "classic_menu_gradient": [
+      "003389",
+      "002E7C",
+      "002E6D"
+    ],
+    "row_border_px": 1,
+    "selected_progress_color": "foreground, declared in native template",
+    "row_anchors_approximate_fhd": {
+      "MetrixNEO": {
+        "reference": {
+          "service": 235.5,
+          "divider": 397.5,
+          "programme": 426,
+          "progress": 1092
+        },
+        "current": {
+          "service": 234,
+          "divider": 396,
+          "programme": 426,
+          "progress": 1092
+        }
+      },
+      "MetrixNEOAdvanced": {
+        "reference": {
+          "service": 426,
+          "divider": 559.5,
+          "programme": 589.5,
+          "progress": 1044
+        },
+        "current": {
+          "service": 426,
+          "divider": 560,
+          "programme": 590,
+          "progress": 1044
+        }
+      }
+    },
+    "measurement_note": "Manual anchors scaled from user images; not a pixel identity or overall similarity score."
+  },
+  "user_image_clarification": {
+    "programme_image": "dynamic, selected EPG event; example picture is never in runtime packages",
+    "city_image": "example channel content, not wallpaper",
+    "channel_list_background": "solid #031323, explicitly chosen by user",
+    "scenic_runtime_asset": "REMOVED",
+    "artwork_source_currently_implemented": "programme posters: local event catalog; team badges: opt-in TheSportsDB with bounded cache",
+    "async_artwork_checks": "see reports/tests.txt for poster and team-logo cases",
+    "team_provider_live_metadata": "PASS: Real Madrid 133738 and Barcelona 133739; two PNGs validated in memory on PC; no images saved or receiver access; see team-provider-live.json",
+    "receiver": "NO_CONNECTION_NO_WRITE"
+  }
+}
