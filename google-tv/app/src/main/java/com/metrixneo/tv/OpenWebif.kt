@@ -52,7 +52,7 @@ class OpenWebif(private val cfg:ReceiverSettings){
         if(!data.has("info") && !data.has("result") && !data.has("enigma2"))error("Réponse OpenWebif non reconnue")
         (System.nanoTime()-start)/1_000_000
     }
-    suspend fun loadChannels():List<TvChannel>=withContext(Dispatchers.IO){
+    suspend fun loadChannels(): List<TvChannel> = withContext(Dispatchers.IO){
         val list=ArrayList<TvChannel>()
         val seen=HashSet<String>()
         fun walk(node:Any?,bouquet:String,depth:Int){
