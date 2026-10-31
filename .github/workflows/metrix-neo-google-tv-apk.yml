@@ -1,0 +1,36 @@
+name: Metrix NEO AI Google TV APK
+on:
+  push:
+    branches: [codex/metrix-neo-ai-google-tv]
+    paths:
+      - 'google-tv/**'
+      - '.github/workflows/metrix-neo-google-tv-apk.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: google-tv
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Install Android SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Compile debug APK
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+      - name: Publish APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MetrixNEO-AI-GoogleTV-debug
+          path: google-tv/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
