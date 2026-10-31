@@ -10,8 +10,8 @@ android {
         applicationId = "com.metrixneo.tv"
         minSdk = 26
         targetSdk = 35
-        versionCode = 2
-        versionName = "0.2.0-alpha"
+        versionCode = 3
+        versionName = "0.3.0-alpha"
     }
     buildFeatures { compose = true }
     compileOptions {
@@ -19,6 +19,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+    packaging { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
 }
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.04.00"))
@@ -28,7 +29,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.tv:tv-material:1.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
-    implementation("androidx.media3:media3-exoplayer:1.11.1")
-    implementation("androidx.media3:media3-exoplayer-hls:1.11.1")
-    implementation("androidx.media3:media3-ui:1.11.1")
+    implementation("androidx.media3:media3-exoplayer:1.8.0")
+    implementation("androidx.media3:media3-exoplayer-hls:1.8.0")
+    implementation("androidx.media3:media3-ui:1.8.0")
 }
