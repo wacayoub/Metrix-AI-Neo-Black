@@ -1,0 +1,225 @@
+{
+  "native_channels": [
+    {
+      "name": "Rai 1",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "1"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "1",
+          "cached": "false",
+          "elapsed_ms": "420"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "1",
+          "value": "2",
+          "elapsed_ms": "431"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "1",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "1",
+          "value": "1",
+          "elapsed_ms": "524"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    },
+    {
+      "name": "Rai 2",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "2"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "2",
+          "cached": "false",
+          "elapsed_ms": "46"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "2",
+          "value": "2",
+          "elapsed_ms": "47"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "2",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "2",
+          "value": "1",
+          "elapsed_ms": "65"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    },
+    {
+      "name": "Rai 3",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "3"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "3",
+          "cached": "false",
+          "elapsed_ms": "64"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "3",
+          "value": "2",
+          "elapsed_ms": "65"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "3",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "3",
+          "value": "1",
+          "elapsed_ms": "105"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    }
+  ],
+  "checks": [
+    {
+      "name": "Provider folder opens",
+      "passed": true
+    },
+    {
+      "name": "Nested provider leaf opens channels",
+      "passed": true
+    },
+    {
+      "name": "IPTV selection opens player",
+      "passed": true
+    },
+    {
+      "name": "Mini TV frame opens",
+      "passed": true
+    },
+    {
+      "name": "Preview identifies the playing IPTV channel",
+      "passed": true
+    },
+    {
+      "name": "Yellow opens transparent channel list",
+      "passed": true
+    },
+    {
+      "name": "Yellow restores Mini TV",
+      "passed": true
+    },
+    {
+      "name": "Media3 reports a first video frame",
+      "passed": false
+    },
+    {
+      "name": "Video counter and playback clock advance",
+      "passed": false
+    },
+    {
+      "name": "No Media3 error during IPTV observation",
+      "passed": true
+    },
+    {
+      "name": "IPTV still playing at last sample",
+      "passed": false
+    }
+  ],
+  "limits": [
+    "Decoder counters do not certify final panel motion or audible sound.",
+    "Short HD IPTV test does not certify all channels, 4K or HDR.",
+    "Only normal app streaming and read-only receiver API access."
+  ],
+  "manufacturer": "TCL",
+  "model": "Smart TV",
+  "version": "0.8.3-alpha",
+  "iptv": {
+    "service": "TF1 / PURE IPTV / FRANCE FHD",
+    "additional_observation_seconds": 60,
+    "observations": [
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "27891",
+        "buffered_ms": "9922",
+        "rendered": "698",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "37887",
+        "buffered_ms": "4535",
+        "rendered": "948",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "47892",
+        "buffered_ms": "6860",
+        "rendered": "1198",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "playing",
+        "id": "4",
+        "value": "false"
+      }
+    ]
+  },
+  "test_error_type": "RuntimeError",
+  "interruption": {
+    "wakefulness": "Asleep",
+    "android_sleep_reason": "power_button",
+    "screen_off_timeout_ms": 600000,
+    "cause_attribution": "Android sleep event observed; origin of power command not determined."
+  },
+  "harness_limit": "First attempt queried a bounded logcat tail; the first-frame event aged out. Failed first-frame check is not proof of a decoder failure. Continuous collection used for the following attempt."
+}

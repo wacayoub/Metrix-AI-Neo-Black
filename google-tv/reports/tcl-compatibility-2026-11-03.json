@@ -1,0 +1,294 @@
+{
+  "native_channels": [
+    {
+      "name": "Rai 1",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "1"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "1",
+          "cached": "false",
+          "elapsed_ms": "361"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "1",
+          "value": "2",
+          "elapsed_ms": "371"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "1",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "1",
+          "value": "1",
+          "elapsed_ms": "528"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    },
+    {
+      "name": "Rai 2",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "2"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "2",
+          "cached": "false",
+          "elapsed_ms": "191"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "2",
+          "value": "2",
+          "elapsed_ms": "192"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "2",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "2",
+          "value": "1",
+          "elapsed_ms": "206"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    },
+    {
+      "name": "Rai 3",
+      "observations": [
+        {
+          "tag": "NeoZap",
+          "event": "request",
+          "id": "3"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "resolved",
+          "id": "3",
+          "cached": "false",
+          "elapsed_ms": "215"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "3",
+          "value": "2",
+          "elapsed_ms": "216"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "error",
+          "id": "3",
+          "code": "ERROR_CODE_IO_UNSPECIFIED"
+        },
+        {
+          "tag": "NeoZap",
+          "event": "state",
+          "id": "3",
+          "value": "1",
+          "elapsed_ms": "243"
+        }
+      ],
+      "displayed_error": "Le Vu+ refuse d\u2019ouvrir cette cha\u00eene (HTTP 400). Tuner occup\u00e9 ou service indisponible : mets le Vu+ en veille simple, puis OK pour r\u00e9essayer."
+    }
+  ],
+  "checks": [
+    {
+      "name": "Provider folder opens",
+      "passed": true
+    },
+    {
+      "name": "Nested provider leaf opens channels",
+      "passed": true
+    },
+    {
+      "name": "IPTV selection opens player",
+      "passed": true
+    },
+    {
+      "name": "Mini TV frame opens",
+      "passed": true
+    },
+    {
+      "name": "Preview identifies the playing IPTV channel",
+      "passed": true
+    },
+    {
+      "name": "Yellow opens transparent channel list",
+      "passed": true
+    },
+    {
+      "name": "Yellow restores Mini TV",
+      "passed": true
+    },
+    {
+      "name": "Media3 reports a first video frame",
+      "passed": true
+    },
+    {
+      "name": "Video counter and playback clock advance",
+      "passed": true
+    },
+    {
+      "name": "No Media3 error during IPTV observation",
+      "passed": true
+    },
+    {
+      "name": "IPTV still playing at last sample",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "Decoder counters do not certify final panel motion or audible sound.",
+    "Short HD IPTV test does not certify all channels, 4K or HDR.",
+    "Only normal app streaming and read-only receiver API access."
+  ],
+  "manufacturer": "TCL",
+  "model": "Smart TV",
+  "version": "0.8.3-alpha",
+  "iptv": {
+    "service": "TF1 / PURE IPTV / FRANCE FHD",
+    "additional_observation_seconds": 30,
+    "observations": [
+      {
+        "tag": "NeoZap",
+        "event": "request",
+        "id": "4"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "resolved",
+        "id": "4",
+        "cached": "false",
+        "elapsed_ms": "2"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "state",
+        "id": "4",
+        "value": "2",
+        "elapsed_ms": "3"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "first_frame",
+        "id": "4",
+        "elapsed_ms": "1511"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "state",
+        "id": "4",
+        "value": "3",
+        "elapsed_ms": "1657"
+      },
+      {
+        "tag": "NeoZap",
+        "event": "playing",
+        "id": "4",
+        "value": "true"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "8056",
+        "buffered_ms": "6712",
+        "rendered": "203",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "18057",
+        "buffered_ms": "9426",
+        "rendered": "453",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "28056",
+        "buffered_ms": "12611",
+        "rendered": "703",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "38062",
+        "buffered_ms": "8408",
+        "rendered": "952",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "48057",
+        "buffered_ms": "5325",
+        "rendered": "1203",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "58055",
+        "buffered_ms": "7743",
+        "rendered": "1452",
+        "dropped": "0"
+      },
+      {
+        "tag": "NeoPlayback",
+        "event": "id=4",
+        "id": "4",
+        "state": "3",
+        "playing": "true",
+        "position_ms": "68064",
+        "buffered_ms": "11472",
+        "rendered": "1702",
+        "dropped": "0"
+      }
+    ]
+  },
+  "app_process_survived": true
+}

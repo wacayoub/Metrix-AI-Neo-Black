@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-02",
+  "device": "Sony BRAVIA_VU3 / Android 14 / ARMv7",
+  "before": "0.8.0-alpha / code 19 / optimized release",
+  "after": "0.8.1-alpha / code 20 / optimized release",
+  "artifact": {
+    "bytes": 29905554,
+    "sha256": "21b6423fee5ab942ec23df3dc7e0962de5fbac19124f2c4ced003f5e62832302"
+  },
+  "protocol": {
+    "channels": "Rai 1 Media3 paused beneath All services; ten Down then ten Up, 100 ms sleep between vertical keys; Right Right Left Left. Baseline and matched after: snapshot immediately after shell returns. A separate after snapshot includes 500 ms idle.",
+    "folders": "Native bouquet root; ten Down then ten Up, 100 ms sleep between keys.",
+    "menu": "Main menu; ten Right then ten Left, 100 ms sleep between keys.",
+    "input_delivery": "Loops run inside one ADB shell on the TV. Android input processing adds time to the explicit sleeps."
+  },
+  "measurements": {
+    "channels": {
+      "before": {
+        "frames": 40,
+        "janky_frames": 20,
+        "janky_percent": 50.0,
+        "median_ms": 22,
+        "p90_ms": 27,
+        "p95_ms": 29,
+        "p99_ms": 29,
+        "gpu_median_ms": 4
+      },
+      "after": {
+        "frames": 44,
+        "janky_frames": 33,
+        "janky_percent": 75.0,
+        "median_ms": 31,
+        "p90_ms": 53,
+        "p95_ms": 65,
+        "p99_ms": 77,
+        "gpu_median_ms": 4
+      }
+    },
+    "folders": {
+      "before": {
+        "frames": 40,
+        "janky_frames": 11,
+        "janky_percent": 27.5,
+        "median_ms": 15,
+        "p90_ms": 22,
+        "p95_ms": 23,
+        "p99_ms": 24,
+        "gpu_median_ms": 3
+      },
+      "after": {
+        "frames": 20,
+        "janky_frames": 0,
+        "janky_percent": 0.0,
+        "median_ms": 9,
+        "p90_ms": 15,
+        "p95_ms": 16,
+        "p99_ms": 16,
+        "gpu_median_ms": 3
+      }
+    },
+    "menu": {
+      "before": {
+        "frames": 20,
+        "janky_frames": 2,
+        "janky_percent": 10.0,
+        "median_ms": 13,
+        "p90_ms": 16,
+        "p95_ms": 17,
+        "p99_ms": 17,
+        "gpu_median_ms": 5
+      },
+      "after": {
+        "frames": 20,
+        "janky_frames": 4,
+        "janky_percent": 20.0,
+        "median_ms": 13,
+        "p90_ms": 18,
+        "p95_ms": 20,
+        "p99_ms": 20,
+        "gpu_median_ms": 5
+      }
+    }
+  },
+  "limits": [
+    "gfxinfo UI render durations; not physical remote latency, video smoothness or a constant 60 fps guarantee.",
+    "Short samples on the same TV; firmware and background scheduling may vary.",
+    "No receiver modification and no video pixel probing. 4K/HDR and IPTV stability are not resolved or certified by UI testing.",
+    "Live EPG content can differ between the before and after samples."
+  ],
+  "channel_first_run_with_final_idle": {
+    "frames": 49,
+    "janky_frames": 34,
+    "janky_percent": 69.39,
+    "median_ms": 32,
+    "p90_ms": 48,
+    "p95_ms": 61,
+    "p99_ms": 69,
+    "gpu_median_ms": 4
+  },
+  "channel_with_final_idle": {
+    "frames": 45,
+    "janky_frames": 33,
+    "janky_percent": 73.33,
+    "median_ms": 31,
+    "p90_ms": 57,
+    "p95_ms": 65,
+    "p99_ms": 77,
+    "gpu_median_ms": 4
+  },
+  "channel_matched_first_run": {
+    "frames": 49,
+    "janky_frames": 34,
+    "janky_percent": 69.39,
+    "median_ms": 32,
+    "p90_ms": 48,
+    "p95_ms": 61,
+    "p99_ms": 69,
+    "gpu_median_ms": 4
+  },
+  "functional": {
+    "navigation": {
+      "report": "sony-smooth-wrap-2026-11-02.json",
+      "passed": true,
+      "checks": 24,
+      "failed_checks": 0
+    },
+    "resume": {
+      "report": "sony-smooth-resume-2026-11-02.json",
+      "passed": true,
+      "checks": 27,
+      "failed_checks": 0
+    },
+    "exit": {
+      "report": "sony-smooth-exit-2026-11-02.json",
+      "passed": true,
+      "checks": 22,
+      "failed_checks": 0
+    }
+  },
+  "build": {
+    "jvm_tests": 23,
+    "jvm_failures": 0,
+    "lint_errors": 0,
+    "lint_warnings": 16,
+    "apk_signature_verified": true,
+    "install_preserved_app_data": true,
+    "art_speed_compilation": true
+  },
+  "initial_resume_attempt": {
+    "report": "sony-smooth-resume-first-attempt-2026-11-02.json",
+    "passed": false,
+    "failure": "Rai 2 returned ERROR_CODE_PARSING_CONTAINER_UNSUPPORTED. A subsequent real first frame was observed on both Rai 1 and Rai 2 before retrying the full flow. No receiver change or player fix was applied.",
+    "candidate_sha256": "cc16bd58a91ebe8ec03bec16460861fae58faf877b55da5549629414bf9f0b47"
+  },
+  "second_resume_attempt": {
+    "report": "sony-smooth-resume-second-attempt-2026-11-02.json",
+    "passed": false,
+    "failure": "Harness assumed Rai 1 was active. The restored channel was already Rai 2, so selecting Rai 2 correctly caused no new tune/first-frame event. Harness now establishes fresh Rai 1 playback before restart checks.",
+    "candidate_sha256": "cc16bd58a91ebe8ec03bec16460861fae58faf877b55da5549629414bf9f0b47"
+  },
+  "installed_apk_sha256_verified": true,
+  "visual_check": {
+    "screenshot": "sony-smooth-ui-2026-11-02.png",
+    "visible_channel_rows": 20,
+    "selected_indices": [
+      0
+    ],
+    "selected_name": "Rai 1",
+    "picons_visible": true,
+    "name_followed_by_epg_visible": true,
+    "clock_visible": true,
+    "weather_state": "pending, shown honestly as En attente; no weather reading certified",
+    "final_playback": "Rai 1 Media3 first-frame callback 2656 ms, READY and playing true; channel list left open"
+  }
+}

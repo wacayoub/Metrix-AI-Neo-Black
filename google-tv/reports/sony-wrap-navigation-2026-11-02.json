@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "name": "All services starts on row one",
+      "passed": true,
+      "check_seconds": 2.96
+    },
+    {
+      "name": "Up from channel one selects the last channel",
+      "passed": true,
+      "check_seconds": 4.27
+    },
+    {
+      "name": "Last channel page is displayed",
+      "passed": true,
+      "check_seconds": 2.92
+    },
+    {
+      "name": "Down from last channel returns to row one",
+      "passed": true,
+      "check_seconds": 3.1
+    },
+    {
+      "name": "Normal Down still selects row two",
+      "passed": true,
+      "check_seconds": 3.05
+    },
+    {
+      "name": "Normal Up still selects row one",
+      "passed": true,
+      "check_seconds": 2.99
+    },
+    {
+      "name": "Previous page remains bounded at row one",
+      "passed": true,
+      "check_seconds": 2.99
+    },
+    {
+      "name": "CH down retains twenty-row pagination",
+      "passed": true,
+      "check_seconds": 3.02
+    },
+    {
+      "name": "CH up retains twenty-row pagination",
+      "passed": true,
+      "check_seconds": 2.98
+    },
+    {
+      "name": "Up continues backwards on the last page",
+      "passed": true,
+      "check_seconds": 2.96
+    },
+    {
+      "name": "Down crosses the end back to row one",
+      "passed": true,
+      "check_seconds": 3.12
+    },
+    {
+      "name": "neo.satellites starts on row one",
+      "passed": true,
+      "check_seconds": 2.94
+    },
+    {
+      "name": "neo.satellites Up selects last visible entry",
+      "passed": true,
+      "check_seconds": 2.79
+    },
+    {
+      "name": "neo.satellites Down returns to row one",
+      "passed": true,
+      "check_seconds": 2.95
+    },
+    {
+      "name": "neo.folders starts on row one",
+      "passed": true,
+      "check_seconds": 2.99
+    },
+    {
+      "name": "neo.folders Up selects last visible entry",
+      "passed": true,
+      "check_seconds": 2.96
+    },
+    {
+      "name": "neo.folders Down returns to row one",
+      "passed": true,
+      "check_seconds": 2.97
+    },
+    {
+      "name": "Final list is on row one",
+      "passed": true,
+      "check_seconds": 2.96
+    }
+  ],
+  "scope": "Implemented remote/UI flows; no visual/audio certification of the video plane.",
+  "app_version": "0.7.3-alpha",
+  "channel_count": 10436,
+  "neo.satellites_last_index": 41,
+  "neo.folders_last_index": 155,
+  "passed": true,
+  "installed_artifact": {
+    "version_code": 18,
+    "version_name": "0.7.3-alpha",
+    "build_type": "release",
+    "sha256": "98e6cea7bc8f06fbcb208178954a5980e6dd2e962e3c8cefcbf945463819c0a8",
+    "bytes": 29768501
+  },
+  "build_validation": "assembleRelease and lintRelease successful; 0 lint errors, 15 warnings; APK signature and ART speed compilation verified",
+  "receiver_modified": false
+}

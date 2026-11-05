@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "name": "Neo opens with saved configuration",
+      "passed": true
+    },
+    {
+      "name": "One Back stays inside Neo",
+      "passed": true
+    },
+    {
+      "name": "One physical Back produces exactly one app Back",
+      "passed": true
+    },
+    {
+      "name": "Two Back presses more than two seconds apart do not exit",
+      "passed": true
+    },
+    {
+      "name": "Navigation between Back presses cancels exit confirmation",
+      "passed": true
+    },
+    {
+      "name": "Held Back does not exit Neo",
+      "passed": true
+    },
+    {
+      "name": "Held Back repeat is ignored",
+      "passed": true
+    },
+    {
+      "name": "Double Back reaches the same Home as the physical HOME key",
+      "passed": true
+    },
+    {
+      "name": "Closed Neo task is removed from Recents",
+      "passed": true
+    },
+    {
+      "name": "Neo opens with saved configuration",
+      "passed": true
+    },
+    {
+      "name": "First Back after relaunch does not exit",
+      "passed": true
+    },
+    {
+      "name": "One EXIT/Escape in menu stays inside Neo",
+      "passed": true
+    },
+    {
+      "name": "Double EXIT/Escape in menu opens Home",
+      "passed": true
+    },
+    {
+      "name": "Neo opens with saved configuration",
+      "passed": true
+    },
+    {
+      "name": "Setup is open for focused-control exit test",
+      "passed": true
+    },
+    {
+      "name": "Double Back from Setup opens Home",
+      "passed": true
+    },
+    {
+      "name": "Neo opens with saved configuration",
+      "passed": true
+    },
+    {
+      "name": "Real first channel decodes before playback exit test",
+      "passed": true
+    },
+    {
+      "name": "Real player is playing before exit",
+      "passed": true
+    },
+    {
+      "name": "Double Back from playback opens Home",
+      "passed": true
+    },
+    {
+      "name": "Playback pauses when exiting",
+      "passed": true
+    },
+    {
+      "name": "Playback task is removed from Recents",
+      "passed": true
+    }
+  ],
+  "scope": "Actual Android TV exit/navigation and playback-state callbacks; no video motion or audio certification.",
+  "home_component": "com.google.android.apps.tv.launcherx/.home.HomeActivity",
+  "app_version": "0.8.2-alpha",
+  "physical_home_component": "com.gathin.tvhome/.MainActivity",
+  "home_redirected": true,
+  "final_component": "com.gathin.tvhome/.MainActivity",
+  "passed": true
+}

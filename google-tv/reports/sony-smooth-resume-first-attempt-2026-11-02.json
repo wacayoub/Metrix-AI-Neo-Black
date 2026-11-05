@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "name": "All services is available",
+      "passed": true
+    },
+    {
+      "name": "Browse to a later page without tuning",
+      "passed": true
+    },
+    {
+      "name": "Cold restart reports an actual restored bookmark",
+      "passed": true
+    },
+    {
+      "name": "Cold restart restores source and exact selection",
+      "passed": true
+    },
+    {
+      "name": "A different real channel decodes before playback save test",
+      "passed": false
+    }
+  ],
+  "scope": "Actual saved channel/list position, cold/warm restart and real decoder callbacks. No panel-motion or audio certification.",
+  "version": "0.8.1-alpha",
+  "passed": false,
+  "failure": "AssertionError: A different real channel decodes before playback save test"
+}

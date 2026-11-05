@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "name": "Real channel list opens with twenty rows",
+      "passed": true
+    },
+    {
+      "name": "Mini TV is available with the playing channel label",
+      "passed": true
+    },
+    {
+      "name": "Single video surface fits the Mini TV frame",
+      "passed": true
+    },
+    {
+      "name": "Browsing another channel keeps Rai 1 in Mini TV",
+      "passed": true
+    },
+    {
+      "name": "Video decode and position continue in Mini TV",
+      "passed": true
+    },
+    {
+      "name": "Yellow opens transparent list without the Mini TV frame",
+      "passed": true
+    },
+    {
+      "name": "Transparent list uses the full-screen video surface",
+      "passed": true
+    },
+    {
+      "name": "Video decode and position continue behind transparent list",
+      "passed": true
+    },
+    {
+      "name": "Held Yellow toggles view only once",
+      "passed": true
+    },
+    {
+      "name": "View changes and browsing do not retune the stream",
+      "passed": true
+    },
+    {
+      "name": "OK returns to full-screen playback",
+      "passed": true
+    },
+    {
+      "name": "Transparent view choice survives process restart",
+      "passed": true
+    },
+    {
+      "name": "Mini TV choice survives process restart",
+      "passed": true
+    }
+  ],
+  "scope": "Actual UI bounds, single Media3 tune, rendered counters and persisted view choice; no video-pixel or audio certification.",
+  "version": "0.8.2-alpha",
+  "mini_bounds": [
+    1256,
+    108,
+    1896,
+    468
+  ],
+  "mini_surface_bounds": [
+    1256,
+    108,
+    1896,
+    468
+  ],
+  "decoder_samples": [
+    {
+      "before": {
+        "id": 1,
+        "state": 3,
+        "playing": true,
+        "position_ms": 17512,
+        "buffered_ms": 1175,
+        "rendered": 393,
+        "dropped": 0
+      },
+      "after": {
+        "id": 1,
+        "state": 3,
+        "playing": true,
+        "position_ms": 27508,
+        "buffered_ms": 843,
+        "rendered": 642,
+        "dropped": 0
+      }
+    },
+    {
+      "before": {
+        "id": 1,
+        "state": 3,
+        "playing": true,
+        "position_ms": 37508,
+        "buffered_ms": 1179,
+        "rendered": 892,
+        "dropped": 0
+      },
+      "after": {
+        "id": 1,
+        "state": 3,
+        "playing": true,
+        "position_ms": 47516,
+        "buffered_ms": 1091,
+        "rendered": 1143,
+        "dropped": 0
+      }
+    }
+  ],
+  "transparent_surface_bounds": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "passed": true,
+  "artifact": {
+    "version_code": 21,
+    "bytes": 29905554,
+    "sha256": "e4c0588a3ad9b43181d199f305424c93a038cb29baed790bb82d1c8bfeb62131",
+    "installed_sha256_verified": true
+  },
+  "build": {
+    "jvm_tests": 23,
+    "jvm_failures": 0,
+    "lint_errors": 0,
+    "lint_warnings": 17
+  }
+}

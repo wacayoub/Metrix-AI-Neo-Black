@@ -1,0 +1,43 @@
+{
+  "version_name": "0.7.1-alpha",
+  "version_code": 16,
+  "checks": [
+    {
+      "name": "Twenty channel rows retained",
+      "passed": true
+    },
+    {
+      "name": "All twenty complete channel names precede their EPG",
+      "passed": true
+    },
+    {
+      "name": "SAN MARINO RTV HD full label followed by EPG",
+      "passed": true
+    },
+    {
+      "name": "WEDOTV MOVIES full label followed by EPG",
+      "passed": true
+    },
+    {
+      "name": "EPG guide opens for the selected channel",
+      "passed": true
+    },
+    {
+      "name": "Visual inspection: full names and following EPG fit without overlap",
+      "passed": true,
+      "verification": "Inspected settled list screenshot on Sony; examples SAN MARINO RTV HD and WEDOTV MOVIES"
+    },
+    {
+      "name": "Visual inspection: selected programme and guide details remain readable",
+      "passed": true,
+      "verification": "Inspected actual Sony guide screenshot"
+    }
+  ],
+  "passed": true,
+  "apk_sha256": "93f50199da66908a6bb1c9167d2ffc6fe60465fcd33f705b8788e37682861ee5",
+  "apk_bytes": 29768501,
+  "build": "assembleRelease succeeded; lintRelease 0 errors, 15 warnings",
+  "scope": "Channel names and EPG layout, actual Sony screenshots and accessibility; no video stability or new codec claim",
+  "overflow_animation": "Implemented only for selected overflowing rows; inspected examples fit statically, extreme overflow not separately measured",
+  "receiver_modified": false
+}

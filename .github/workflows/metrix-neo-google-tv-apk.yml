@@ -34,12 +34,32 @@ jobs:
           echo "sdk.dir=$ANDROID_HOME" > local.properties
       - name: Install Android SDK
         run: |
-          "$SDKMANAGER" 'platforms;android-36' 'build-tools;36.0.0'
-      - name: Compile debug APK
-        run: gradle --no-daemon --stacktrace :app:assembleDebug
+          "$SDKMANAGER" 'platforms;android-36' 'build-tools;36.0.0' 'ndk;25.2.9519653'
+      - name: Prepare official GStreamer Android SDK
+        run: |
+          python3 tools/prepare-gstreamer.py "$RUNNER_TEMP/gstreamer"
+          echo "GSTREAMER_ROOT_ANDROID=$RUNNER_TEMP/gstreamer" >> "$GITHUB_ENV"
+      - name: Compile and validate debug APK
+        run: gradle --no-daemon --stacktrace :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
       - name: Publish APK
         uses: actions/upload-artifact@v4
         with:
           name: MetrixNEO-AI-GoogleTV-debug
           path: google-tv/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+      - name: Publish validation reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MetrixNEO-GoogleTV-validation
+          path: |
+            google-tv/app/build/reports/tests/testDebugUnitTest/
+            google-tv/app/build/test-results/testDebugUnitTest/
+            google-tv/app/build/reports/lint-results-debug.*
+          if-no-files-found: warn
+      - name: Write build summary
+        if: always()
+        run: |
+          echo '## Metrix NEO Google TV' >> "$GITHUB_STEP_SUMMARY"
+          echo 'ARMv7 debug build, JVM tests and Android lint. APK and validation reports are separate artifacts.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'CI does not test Sony/TCL playback, 4K/HDR, receiver availability or mobile VPN access. See google-tv/IMPLEMENTATION_STATUS.md for actual hardware results and limits.' >> "$GITHUB_STEP_SUMMARY"

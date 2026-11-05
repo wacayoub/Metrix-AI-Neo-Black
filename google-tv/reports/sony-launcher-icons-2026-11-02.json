@@ -1,0 +1,29 @@
+{
+  "launched_from_actual_home_tile_with_OK": true,
+  "launcher_label": "Metrix NEO AI TV",
+  "banner_visually_verified": true,
+  "decoder_first_frame_after_tile_launch": true,
+  "restored_all_services_cursor_27_and_playback": true,
+  "saved_selection_27_visible_on_first_list_open": true,
+  "passed": true,
+  "scope": "Actual launcher tile, restored source/selection and decoder callback; no final panel-motion/audio certification.",
+  "installed_artifact": {
+    "version_code": 19,
+    "version_name": "0.8.0-alpha",
+    "sha256": "4f66a2e7c9fa5de453817ef5e41d08d4231b8c6317b7c9c7cfdbd82b2265187a",
+    "bytes": 29905554,
+    "build_type": "release"
+  },
+  "build_validation": "assembleRelease successful; 23 JVM tests passed; lintRelease 0 errors and 16 warnings; signature and ART speed verified",
+  "receiver_modified": false,
+  "main_launcher_resolves": true,
+  "leanback_launcher_resolves": true,
+  "icon_master_size": [
+    512,
+    512
+  ],
+  "banner_master_size": [
+    1280,
+    720
+  ]
+}

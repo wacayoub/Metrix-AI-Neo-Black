@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "name": "GStreamer decodes a real first video frame",
+      "passed": true
+    },
+    {
+      "name": "GStreamer list exposes the Mini TV frame",
+      "passed": true
+    },
+    {
+      "name": "GStreamer surface is actually 640 by 360 in Mini TV",
+      "passed": true
+    },
+    {
+      "name": "GStreamer Mini TV pause is acknowledged",
+      "passed": true
+    },
+    {
+      "name": "GStreamer Mini TV play is acknowledged",
+      "passed": true
+    },
+    {
+      "name": "GStreamer transparent mode has full-screen video",
+      "passed": true
+    },
+    {
+      "name": "GStreamer transparent view pause is acknowledged",
+      "passed": true
+    },
+    {
+      "name": "GStreamer transparent view play is acknowledged",
+      "passed": true
+    },
+    {
+      "name": "GStreamer view changes produce no retune or pipeline error",
+      "passed": true
+    },
+    {
+      "name": "Media3 is restored and really decodes",
+      "passed": true
+    },
+    {
+      "name": "Final restored player retains Mini TV",
+      "passed": true
+    }
+  ],
+  "scope": "Actual GStreamer first-frame callback, compositor bounds and PLAYING/PAUSED ACKs. No video-pixel, motion or audio certification.",
+  "mini_bounds": [
+    1256,
+    108,
+    1896,
+    468
+  ],
+  "transparent_bounds": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "passed": true
+}

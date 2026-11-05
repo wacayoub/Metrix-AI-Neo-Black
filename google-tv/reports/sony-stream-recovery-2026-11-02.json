@@ -1,0 +1,71 @@
+{
+  "date_utc": "2026-11-02",
+  "device_log_date": "2026-11-03",
+  "version": "0.8.3-alpha",
+  "version_code": 22,
+  "artifact": {
+    "bytes": 29921938,
+    "sha256": "f08f0b0c343fb6ad2a300e93a47e8ad4eaaea4556c04271f2a60501bb9c6a1a7",
+    "installed_hash_verified": true
+  },
+  "receiver_observation": {
+    "model": "Vu+ Zero4K",
+    "http_status": 200,
+    "content_type": "video/mpeg",
+    "body_bytes": 28,
+    "body_http_status": 400,
+    "body_http_reason": "Bad Request",
+    "native_service_ref_matches_playlist": true,
+    "stream_query_empty": true,
+    "tuner_count": 1,
+    "tuner_live": "75.0 E / 01 BBC ONE",
+    "signal_snr": 0,
+    "signal_snr_db": "0.00",
+    "in_standby": false,
+    "streaming_clients": 0,
+    "recording": false,
+    "receiver_modified": false
+  },
+  "checks": [
+    {
+      "name": "Real wrapped HTTP error detected before media extractor",
+      "passed": true
+    },
+    {
+      "name": "OK creates a new request with freshly resolved M3U",
+      "passed": true,
+      "evidence": "NeoZap request id=3; resolved cached=false; elapsed_ms=46"
+    },
+    {
+      "name": "IPTV starts independently of receiver satellite tuner",
+      "passed": true,
+      "service": "TF1 / PURE IPTV / FRANCE FHD",
+      "evidence": {
+        "first_frame_ms": 1504,
+        "ready": true,
+        "playing": true,
+        "position_ms": 8292,
+        "rendered": 209,
+        "dropped": 0
+      }
+    }
+  ],
+  "build": {
+    "jvm_tests": 27,
+    "jvm_failures": 0,
+    "lint_errors": 0,
+    "lint_warnings": 17,
+    "signature_verified": true,
+    "art_speed_compilation": true
+  },
+  "outcome": {
+    "android_guard_and_retry_installed": true,
+    "satellite_playback_restored": false,
+    "waiting_for": "Receiver tuner/service availability; user asked to put Vu+ into simple standby with its remote. Receiver control forbidden by project read-only instructions."
+  },
+  "limits": [
+    "HTTP 400 identifies receiver stream start refusal; the exact receiver-side repair has not been performed.",
+    "IPTV first-frame and short decoder progression confirmed; continued playback not certified. A subsequent playing=false event was observed.",
+    "No video pixel probing, receiver writes, zap or power command. Existing 4K/HDR and IPTV stability limits remain."
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "duration_seconds": 90.11,
+    "app_process_survived": true,
+    "player_samples": 9,
+    "distinct_presentation_timestamps": 4424,
+    "max_presentation_gap_ms": 34.076,
+    "max_no_presentation_advance_ms": 0.0,
+    "presentation_gaps_over_500ms": [],
+    "player_clock_stalls_seconds": [],
+    "video_output_counter_stalls_seconds": [],
+    "read_errors": 0,
+    "visible_motion_verified": false,
+    "limitation": "Android presentation/counter measurements do not observe the final panel pixels. No freeze-free verdict is possible from this report alone."
+  },
+  "player_samples": [
+    {
+      "observed_seconds": 5.24,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "5135",
+      "buffered_ms": "8431",
+      "rendered": "257",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 15.72,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "15132",
+      "buffered_ms": "7501",
+      "rendered": "757",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 26.3,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "25134",
+      "buffered_ms": "8464",
+      "rendered": "1257",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 31.78,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "35138",
+      "buffered_ms": "7976",
+      "rendered": "1758",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 42.43,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "45138",
+      "buffered_ms": "8172",
+      "rendered": "2258",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 53.09,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "55143",
+      "buffered_ms": "8131",
+      "rendered": "2758",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 63.5,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "65143",
+      "buffered_ms": "7624",
+      "rendered": "3258",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 74.04,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "75149",
+      "buffered_ms": "7537",
+      "rendered": "3758",
+      "dropped": "0"
+    },
+    {
+      "observed_seconds": 84.72,
+      "tag": "NeoPlayback",
+      "id": "1",
+      "state": "3",
+      "playing": "true",
+      "position_ms": "85155",
+      "buffered_ms": "7367",
+      "rendered": "4259",
+      "dropped": "0"
+    }
+  ],
+  "state_changes": [],
+  "errors": []
+}

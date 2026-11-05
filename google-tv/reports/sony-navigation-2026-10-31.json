@@ -1,0 +1,346 @@
+{
+  "checks": [
+    {
+      "name": "All services opens",
+      "passed": true,
+      "check_seconds": 6.57
+    },
+    {
+      "name": "Twenty rows and selected first channel",
+      "passed": true,
+      "check_seconds": 3.28
+    },
+    {
+      "name": "Navigation burst returns to first row",
+      "passed": true,
+      "check_seconds": 3.85
+    },
+    {
+      "name": "Right advances twenty channels",
+      "passed": true,
+      "check_seconds": 5.96
+    },
+    {
+      "name": "CH up pages channel list",
+      "passed": true,
+      "check_seconds": 3.27
+    },
+    {
+      "name": "CH down pages channel list",
+      "passed": true,
+      "check_seconds": 3.19
+    },
+    {
+      "name": "Five digit channel number is preserved",
+      "passed": true,
+      "check_seconds": 3.24
+    },
+    {
+      "name": "Numeric channel selection opens player",
+      "passed": true,
+      "check_seconds": 3.1
+    },
+    {
+      "name": "INFO opens programme details",
+      "passed": true,
+      "check_seconds": 2.99
+    },
+    {
+      "name": "Back from details restores player",
+      "passed": true,
+      "check_seconds": 2.91
+    },
+    {
+      "name": "Down opens channel list",
+      "passed": true,
+      "check_seconds": 3.26
+    },
+    {
+      "name": "INFO on list opens guide",
+      "passed": true,
+      "check_seconds": 3.15
+    },
+    {
+      "name": "Guide channel navigation stays in guide",
+      "passed": true,
+      "check_seconds": 3.15
+    },
+    {
+      "name": "Guide OK tunes selected service",
+      "passed": true,
+      "check_seconds": 3.26
+    },
+    {
+      "name": "Audio key opens tracks",
+      "passed": true,
+      "check_seconds": 3.19
+    },
+    {
+      "name": "Track confirmation returns to player",
+      "passed": true,
+      "check_seconds": 3.11
+    },
+    {
+      "name": "Held MENU opens once",
+      "passed": true,
+      "check_seconds": 3.36
+    },
+    {
+      "name": "Plugin dialog honestly states limitation",
+      "passed": true,
+      "check_seconds": 3.39
+    },
+    {
+      "name": "OK closes dialog once",
+      "passed": true,
+      "check_seconds": 3.34
+    },
+    {
+      "name": "Setup opens through menu number",
+      "passed": true,
+      "check_seconds": 3.3
+    },
+    {
+      "name": "Setup Back restores list",
+      "passed": true,
+      "check_seconds": 3.49
+    },
+    {
+      "name": "Timers read-only view opens",
+      "passed": true,
+      "check_seconds": 3.33
+    },
+    {
+      "name": "Timers read-only request completes",
+      "passed": true,
+      "check_seconds": 3.18
+    },
+    {
+      "name": "Standby dialog does not power off receiver",
+      "passed": true,
+      "check_seconds": 3.36
+    },
+    {
+      "name": "Information shows installed version",
+      "passed": true,
+      "check_seconds": 3.24
+    },
+    {
+      "name": "Blue opens native bouquet root",
+      "passed": true,
+      "check_seconds": 3.41
+    },
+    {
+      "name": "CH up pages native folders",
+      "passed": true,
+      "check_seconds": 3.36
+    },
+    {
+      "name": "Nested provider folder opens",
+      "passed": true,
+      "check_seconds": 3.35
+    },
+    {
+      "name": "Nested leaf displays channels",
+      "passed": true,
+      "check_seconds": 6.38
+    },
+    {
+      "name": "Leaf Back restores parent folder",
+      "passed": true,
+      "check_seconds": 3.55
+    },
+    {
+      "name": "Parent selection restored",
+      "passed": true,
+      "check_seconds": 3.41
+    },
+    {
+      "name": "Held OK opens leaf once without accidental tune",
+      "passed": true,
+      "check_seconds": 3.47
+    },
+    {
+      "name": "Provider selection restored in root",
+      "passed": true,
+      "check_seconds": 3.48
+    },
+    {
+      "name": "Cached nested path reopens",
+      "passed": true,
+      "check_seconds": 3.52
+    },
+    {
+      "name": "Green opens satellite list",
+      "passed": true,
+      "check_seconds": 3.45
+    },
+    {
+      "name": "CH down pages satellites",
+      "passed": true,
+      "check_seconds": 3.49
+    },
+    {
+      "name": "CH up pages satellites",
+      "passed": true,
+      "check_seconds": 3.42
+    },
+    {
+      "name": "Satellite number opens its populated channel list",
+      "passed": true,
+      "check_seconds": 4.99
+    },
+    {
+      "name": "Cached satellite reopens populated",
+      "passed": true,
+      "check_seconds": 3.57
+    },
+    {
+      "name": "Yellow clearly labels provider limitation",
+      "passed": true,
+      "check_seconds": 3.49
+    },
+    {
+      "name": "Final return to normal TV playback",
+      "passed": true,
+      "check_seconds": 4.1
+    },
+    {
+      "name": "Media3 pause changes actual player state",
+      "passed": true,
+      "check_seconds": 0.91,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Media3 resume changes actual player state",
+      "passed": true,
+      "check_seconds": 0.88,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "CH up decodes next satellite channel",
+      "passed": true,
+      "check_seconds": 2.8,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "CH up selects the next service",
+      "passed": true,
+      "check_seconds": 3.62
+    },
+    {
+      "name": "CH down decodes previous satellite channel",
+      "passed": true,
+      "check_seconds": 2.45,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Zero recalls the previous service",
+      "passed": true,
+      "check_seconds": 2.45,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Recall restores the previous channel position",
+      "passed": true,
+      "check_seconds": 3.59
+    },
+    {
+      "name": "Media3 decodes the IPTV FHD service",
+      "passed": true,
+      "check_seconds": 1.92,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Setup retains player selector",
+      "passed": true,
+      "check_seconds": 3.22
+    },
+    {
+      "name": "GStreamer selection is visible",
+      "passed": true,
+      "check_seconds": 3.49
+    },
+    {
+      "name": "GStreamer uses the same TV interface",
+      "passed": true,
+      "check_seconds": 3.84
+    },
+    {
+      "name": "Optimized APK initializes GStreamer and opens stream",
+      "passed": true,
+      "check_seconds": 8.9,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "GStreamer pause reaches native pipeline",
+      "passed": true,
+      "check_seconds": 0.83,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "GStreamer resume reaches native pipeline",
+      "passed": true,
+      "check_seconds": 0.9,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "GStreamer exposes the discovered audio track",
+      "passed": true,
+      "check_seconds": 3.25
+    },
+    {
+      "name": "GStreamer accepts audio stream selection",
+      "passed": true,
+      "check_seconds": 0.91,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Audio selection returns to GStreamer playback",
+      "passed": true,
+      "check_seconds": 3.23
+    },
+    {
+      "name": "Reopen selector with GStreamer selected",
+      "passed": true,
+      "check_seconds": 3.05
+    },
+    {
+      "name": "Return to Media3 decodes IPTV again",
+      "passed": true,
+      "check_seconds": 1.02,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Media3 selection is restored",
+      "passed": true,
+      "check_seconds": 3.43
+    },
+    {
+      "name": "Final FHD playback with Media3 restored",
+      "passed": true,
+      "check_seconds": 3.28
+    }
+  ],
+  "scope": "Implemented remote/UI flows; no visual/audio certification of the video plane.",
+  "gfxinfo": {
+    "total_frames": "45",
+    "janky_frames": "25",
+    "median_ms": "30",
+    "p90_ms": "61",
+    "p95_ms": "73"
+  },
+  "weather_city_visible": true,
+  "clock_visible": true,
+  "passed": true,
+  "installed_artifact": {
+    "version_name": "0.7.0-alpha",
+    "version_code": 15,
+    "build_type": "release",
+    "apk_sha256": "870cc9d8784680b390ffb65b47c398fa0ceeb70dfd8ff6fec37a7be87b72aec1",
+    "apk_bytes": 29751953,
+    "final_engine": "Media3",
+    "visible_motion_verified": false
+  },
+  "extended_playback_validation": "sony-iptv-duration-2026-10-31.json"
+}

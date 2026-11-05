@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-03",
+  "version": "0.8.3-alpha",
+  "version_code": 22,
+  "sha256": "f08f0b0c343fb6ad2a300e93a47e8ad4eaaea4556c04271f2a60501bb9c6a1a7",
+  "installed_hash_verified_both": true,
+  "receiver_modified": false,
+  "devices": {
+    "sony": {
+      "manufacturer": "Sony",
+      "model": "BRAVIA VU3",
+      "display_mode": [
+        3840,
+        2160
+      ],
+      "declared_hdr_types": [
+        2,
+        3
+      ],
+      "navigation_checks": 24,
+      "exit_checks": 16,
+      "short_iptv_and_preview_checks": 11,
+      "native_channels_refused_http400": [
+        "Rai 1",
+        "Rai 2",
+        "Rai 3"
+      ],
+      "iptv_first_frame_ms": 1006,
+      "iptv_last_position_ms": 68886,
+      "iptv_last_rendered": 1723,
+      "iptv_last_dropped": 0,
+      "app_process_survived": true,
+      "final_home": "com.google.android.apps.tv.launcherx/.home.HomeActivity"
+    },
+    "tcl": {
+      "manufacturer": "TCL",
+      "model": "Smart TV",
+      "display_mode": [
+        1920,
+        1080
+      ],
+      "declared_hdr_types": [
+        2,
+        3
+      ],
+      "navigation_checks": 24,
+      "exit_checks": 16,
+      "short_iptv_and_preview_checks": 11,
+      "native_channels_refused_http400": [
+        "Rai 1",
+        "Rai 2",
+        "Rai 3"
+      ],
+      "iptv_first_frame_ms": 1511,
+      "iptv_last_position_ms": 68064,
+      "iptv_last_rendered": 1702,
+      "iptv_last_dropped": 0,
+      "app_process_survived": true,
+      "final_home": "com.google.android.apps.tv.launcherx/.home.HomeActivity"
+    }
+  },
+  "limits": [
+    "No audible sound or final panel motion certification.",
+    "No 4K/HDR or long-session stability certification.",
+    "Initial TCL attempt interrupted by Android power_button sleep; preserved separately."
+  ]
+}

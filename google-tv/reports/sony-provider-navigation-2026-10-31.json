@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "name": "Blue opens native bouquet root",
+      "passed": true,
+      "check_seconds": 3.32
+    },
+    {
+      "name": "Nested provider folder opens",
+      "passed": true,
+      "check_seconds": 3.46
+    },
+    {
+      "name": "Nested leaf displays channels",
+      "passed": true,
+      "check_seconds": 7.39
+    },
+    {
+      "name": "Leaf Back restores parent folder",
+      "passed": true,
+      "check_seconds": 3.43
+    },
+    {
+      "name": "Parent selection restored",
+      "passed": true,
+      "check_seconds": 3.56
+    },
+    {
+      "name": "Held OK opens leaf once without accidental tune",
+      "passed": true,
+      "check_seconds": 3.95
+    },
+    {
+      "name": "Provider selection restored in root",
+      "passed": true,
+      "check_seconds": 3.62
+    },
+    {
+      "name": "Cached nested path reopens",
+      "passed": true,
+      "check_seconds": 3.93
+    },
+    {
+      "name": "Green opens satellite list",
+      "passed": true,
+      "check_seconds": 3.54
+    },
+    {
+      "name": "CH down pages satellites",
+      "passed": true,
+      "check_seconds": 3.39
+    },
+    {
+      "name": "CH up pages satellites",
+      "passed": true,
+      "check_seconds": 3.57
+    },
+    {
+      "name": "Satellite number opens its channel list",
+      "passed": true,
+      "check_seconds": 6.4
+    },
+    {
+      "name": "Cached satellite reopens",
+      "passed": true,
+      "check_seconds": 3.63
+    },
+    {
+      "name": "Yellow clearly labels provider limitation",
+      "passed": true,
+      "check_seconds": 3.8
+    },
+    {
+      "name": "Final return to normal TV playback",
+      "passed": true,
+      "check_seconds": 4.6
+    }
+  ],
+  "scope": "Implemented remote/UI flows; no visual/audio certification of the video plane.",
+  "passed": true
+}

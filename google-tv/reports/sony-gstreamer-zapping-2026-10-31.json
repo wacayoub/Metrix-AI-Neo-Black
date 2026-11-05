@@ -1,0 +1,40 @@
+{
+  "scope": "Supplemental GStreamer IPTV zapping on final installed APK; no panel pixel/audio verification",
+  "checks": [
+    {
+      "name": "GStreamer starts IPTV for zap test",
+      "passed": true,
+      "check_seconds": 2.19,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "GStreamer CH up decodes next IPTV service",
+      "passed": true,
+      "check_seconds": 3.09,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "GStreamer CH down decodes previous IPTV service",
+      "passed": true,
+      "check_seconds": 2.05,
+      "verification": "player_state_or_decoder_callback"
+    },
+    {
+      "name": "Media3 restored after supplemental zapping",
+      "passed": true,
+      "check_seconds": 2.81,
+      "verification": "player_state_or_decoder_callback"
+    }
+  ],
+  "passed": true,
+  "installed_artifact": {
+    "version_name": "0.7.0-alpha",
+    "version_code": 15,
+    "build_type": "release",
+    "apk_sha256": "870cc9d8784680b390ffb65b47c398fa0ceeb70dfd8ff6fec37a7be87b72aec1",
+    "apk_bytes": 29751953,
+    "final_engine": "Media3",
+    "visible_motion_verified": false
+  },
+  "extended_playback_validation": "sony-iptv-duration-2026-10-31.json"
+}

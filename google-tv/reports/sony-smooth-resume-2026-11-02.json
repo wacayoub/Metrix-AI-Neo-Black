@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "Baseline Rai 1 freshly decodes before restart checks",
+      "passed": true
+    },
+    {
+      "name": "All services is available",
+      "passed": true
+    },
+    {
+      "name": "Browse to a later page without tuning",
+      "passed": true
+    },
+    {
+      "name": "Cold restart reports an actual restored bookmark",
+      "passed": true
+    },
+    {
+      "name": "Cold restart restores source and exact selection",
+      "passed": true
+    },
+    {
+      "name": "A different real channel decodes before playback save test",
+      "passed": true
+    },
+    {
+      "name": "Rai 1 really decodes before saving playback",
+      "passed": true
+    },
+    {
+      "name": "Browse position can differ from playing channel",
+      "passed": true
+    },
+    {
+      "name": "Double EXIT closes Neo",
+      "passed": true
+    },
+    {
+      "name": "Last channel automatically decodes after relaunch",
+      "passed": true
+    },
+    {
+      "name": "Playback screen is restored",
+      "passed": true
+    },
+    {
+      "name": "First list opening keeps the saved cursor",
+      "passed": true
+    },
+    {
+      "name": "Warm return from HOME retunes the last channel",
+      "passed": true
+    },
+    {
+      "name": "Warm return keeps the exact list position",
+      "passed": true
+    },
+    {
+      "name": "Native nested bouquet has a selected service",
+      "passed": true
+    },
+    {
+      "name": "Cold restart reports an actual restored bookmark",
+      "passed": true
+    },
+    {
+      "name": "Cold restart restores source and exact selection",
+      "passed": true
+    },
+    {
+      "name": "Restored nested bouquet Back returns to its real parent",
+      "passed": true
+    },
+    {
+      "name": "Restored parent path returns to the provider in root",
+      "passed": true
+    },
+    {
+      "name": "Real satellite services are loaded",
+      "passed": true
+    },
+    {
+      "name": "Satellite cursor is on a later page",
+      "passed": true
+    },
+    {
+      "name": "Cold restart reports an actual restored bookmark",
+      "passed": true
+    },
+    {
+      "name": "Cold restart restores source and exact selection",
+      "passed": true
+    },
+    {
+      "name": "Final channel change really decodes",
+      "passed": true
+    },
+    {
+      "name": "Final Rai 1 playback decodes",
+      "passed": true
+    },
+    {
+      "name": "Final saved list position is row 28",
+      "passed": true
+    },
+    {
+      "name": "Final exit returns to the TV launcher",
+      "passed": true
+    }
+  ],
+  "scope": "Actual saved channel/list position, cold/warm restart and real decoder callbacks. No panel-motion or audio certification.",
+  "version": "0.8.1-alpha",
+  "passed": true
+}

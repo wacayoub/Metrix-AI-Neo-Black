@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "name": "All services starts on row one",
+      "passed": true,
+      "check_seconds": 3.33
+    },
+    {
+      "name": "Up from channel one selects the last channel",
+      "passed": true,
+      "check_seconds": 9.57
+    },
+    {
+      "name": "Last channel page is displayed",
+      "passed": true,
+      "check_seconds": 3.21
+    },
+    {
+      "name": "Down from last channel returns to row one",
+      "passed": true,
+      "check_seconds": 3.34
+    },
+    {
+      "name": "Normal Down still selects row two",
+      "passed": true,
+      "check_seconds": 3.27
+    },
+    {
+      "name": "Normal Up still selects row one",
+      "passed": true,
+      "check_seconds": 3.33
+    },
+    {
+      "name": "Previous page remains bounded at row one",
+      "passed": true,
+      "check_seconds": 3.29
+    },
+    {
+      "name": "CH down retains twenty-row pagination",
+      "passed": true,
+      "check_seconds": 6.35
+    },
+    {
+      "name": "CH up retains twenty-row pagination",
+      "passed": true,
+      "check_seconds": 3.29
+    },
+    {
+      "name": "Up continues backwards on the last page",
+      "passed": true,
+      "check_seconds": 3.3
+    },
+    {
+      "name": "Down crosses the end back to row one",
+      "passed": true,
+      "check_seconds": 3.3
+    },
+    {
+      "name": "neo.satellites starts on row one",
+      "passed": true,
+      "check_seconds": 3.32
+    },
+    {
+      "name": "neo.satellites Up selects last visible entry",
+      "passed": true,
+      "check_seconds": 3.15
+    },
+    {
+      "name": "neo.satellites Down returns to row one",
+      "passed": true,
+      "check_seconds": 3.27
+    },
+    {
+      "name": "neo.folders starts on row one",
+      "passed": true,
+      "check_seconds": 3.45
+    },
+    {
+      "name": "neo.folders Up selects last visible entry",
+      "passed": true,
+      "check_seconds": 3.27
+    },
+    {
+      "name": "neo.folders Down returns to row one",
+      "passed": true,
+      "check_seconds": 3.39
+    },
+    {
+      "name": "Final list is on row one",
+      "passed": true,
+      "check_seconds": 3.28
+    },
+    {
+      "name": "Held Down retains both initial and repeated navigation",
+      "passed": true,
+      "check_seconds": 3.21
+    },
+    {
+      "name": "EPG pane matches selected channel after held key release",
+      "passed": true,
+      "check_seconds": 3.26
+    },
+    {
+      "name": "Rapid Up burst preserves every movement",
+      "passed": true,
+      "check_seconds": 3.28
+    },
+    {
+      "name": "EPG pane settles on the selected channel after burst",
+      "passed": true,
+      "check_seconds": 3.33
+    },
+    {
+      "name": "Isolated Down updates the EPG pane consistently",
+      "passed": true,
+      "check_seconds": 3.37
+    },
+    {
+      "name": "Final settled list returns to row one",
+      "passed": true,
+      "check_seconds": 3.29
+    }
+  ],
+  "scope": "Implemented remote/UI flows; no visual/audio certification of the video plane.",
+  "app_version": "0.8.2-alpha",
+  "channel_count": 10436,
+  "neo.satellites_last_index": 41,
+  "neo.folders_last_index": 155,
+  "passed": true
+}

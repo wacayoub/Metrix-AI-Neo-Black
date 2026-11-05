@@ -1,0 +1,54 @@
+{
+  "scope": "Extended IPTV check after remote/UI suite; no visual motion or audio verification",
+  "installed_version": "0.7.0-alpha",
+  "media3_observations": [
+    {
+      "request_id": 14,
+      "first_frame_ms": 694,
+      "ended_after_ms": 20244,
+      "rendered_frames": 479
+    },
+    {
+      "request_id": 15,
+      "first_frame_ms": 625,
+      "ended_after_ms": 26051,
+      "rendered_frames": 630
+    }
+  ],
+  "unexpected_live_end_observed": true,
+  "cause_established": false,
+  "visible_motion_verified": false,
+  "notes": "Short remote/UI checks passed, but extended TF1 FHD playback failed in both engines. Error category does not establish whether the cause is stream contents, codec implementation or another component. No Internet diagnosis or panel-motion guarantee is inferred.",
+  "gstreamer_observations": [
+    {
+      "request_id": 16,
+      "first_frame_ms": 1295,
+      "error_after_ms": 13523,
+      "category": "generic stream/codec error; numeric domain not logged in that build"
+    },
+    {
+      "request_id": 1,
+      "first_frame_ms": 2813,
+      "error_after_ms": 23072,
+      "domain": "gst-stream-error-quark",
+      "code": 7,
+      "error_enum": "GST_STREAM_ERROR_DECODE"
+    }
+  ],
+  "error_enum_reference": "https://gstreamer.freedesktop.org/documentation/gstreamer/gsterror.html",
+  "passed": false,
+  "diagnostic_build": {
+    "sha256": "465fb210f26975986181eeb451be1f5178ff1b84cd375de888431ece2c3bbaa3",
+    "bytes": 29752117,
+    "change_from_navigation_suite": "Only native logging of error domain/code; no playback or UI behavior change"
+  },
+  "final_satellite_check": {
+    "position_ms": 86932,
+    "playing": true,
+    "channel": "Rai 1",
+    "engine": "Media3",
+    "visible_motion_verified": false,
+    "rendered_frames": 2152,
+    "state": "READY"
+  }
+}
