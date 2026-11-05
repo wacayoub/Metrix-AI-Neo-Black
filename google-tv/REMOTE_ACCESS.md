@@ -1,6 +1,8 @@
 # Neo hors du LAN, en 4G/5G
 
-Solution proposée le 5 novembre 2026 : **Tailscale avec une passerelle à la maison**. Installation et essai sur un réseau mobile non effectués. Aucun changement du Vu+ ni ouverture de port Internet n'a été réalisé.
+Solution désormais développée à la demande de l'utilisateur : **[Neo Connect intégré](NEOCONNECT.md)**, sans application VPN séparée ni relais cloud. Plugin installé avec autorisation explicite, tunnel Sony → Vu+ vérifié sur le LAN ; accès 4G/5G et réglage du routeur Orange / ZTE restant à valider. Aucune ouverture de port Internet n'a été réalisée.
+
+Le texte ci-dessous conserve la proposition initiale **Tailscale avec une passerelle à la maison**, non retenue et non installée. Ses mentions d'absence de modification du Vu+ décrivent uniquement cette proposition initiale, antérieure à l'exception autorisant Neo Connect.
 
 ```text
 Sony/TCL ailleurs, connectée au partage 4G/5G du téléphone

@@ -41,6 +41,24 @@ jobs:
           echo "GSTREAMER_ROOT_ANDROID=$RUNNER_TEMP/gstreamer" >> "$GITHUB_ENV"
       - name: Compile and validate debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: google-tv/receiver-plugin/endpoint/go.mod
+          cache-dependency-path: google-tv/receiver-plugin/endpoint/go.sum
+      - name: Validate and build Neo Connect receiver plugin
+        run: |
+          go -C receiver-plugin/endpoint test -v -timeout 60s ./...
+          python3 -m unittest discover -s receiver-plugin/tests -v
+          python3 receiver-plugin/build_endpoint.py
+          python3 receiver-plugin/build_ipk.py
+      - name: Publish receiver plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: NeoConnect-receiver-plugin
+          path: |
+            google-tv/receiver-plugin/dist/*.ipk
+            google-tv/receiver-plugin/dist/*.sha256
+          if-no-files-found: error
       - name: Publish APK
         uses: actions/upload-artifact@v4
         with:

@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "name": "Neo Connect screen opens",
+      "passed": true
+    },
+    {
+      "name": "Native WireGuard version call succeeds on the TV",
+      "passed": true
+    },
+    {
+      "name": "Opening settings does not automatically start VPN",
+      "passed": true
+    },
+    {
+      "name": "D-pad can focus an enabled action",
+      "passed": true
+    },
+    {
+      "name": "Receiver TLS fingerprint matches the trusted reference",
+      "passed": true
+    },
+    {
+      "name": "Pairing creates a local encrypted profile",
+      "passed": true
+    },
+    {
+      "name": "Android consent dialog belongs to the VPN request",
+      "passed": true
+    },
+    {
+      "name": "Real WireGuard authenticated exchange is reported",
+      "passed": true
+    },
+    {
+      "name": "OpenWebif actually responds inside the tunnel",
+      "passed": true
+    },
+    {
+      "name": "Disconnect returns to the stopped state",
+      "passed": true
+    },
+    {
+      "name": "Disconnect stops the owned foreground service",
+      "passed": true
+    },
+    {
+      "name": "Neo Connect screen opens",
+      "passed": true
+    },
+    {
+      "name": "Encrypted profile survives process recreation",
+      "passed": true
+    },
+    {
+      "name": "Single Back restores Neo Setup",
+      "passed": true
+    },
+    {
+      "name": "Two separate Back presses return to TV Home",
+      "passed": true
+    }
+  ],
+  "scope": "Actual Android UI, embedded native load and optional receiver tunnel handshake/API; no mobile network or video fluidity claim.",
+  "version": "0.9.0-alpha",
+  "tunnel_api_verified_on_lan": true,
+  "final_component": "com.google.android.apps.tv.launcherx/.home.HomeActivity",
+  "passed": true
+}

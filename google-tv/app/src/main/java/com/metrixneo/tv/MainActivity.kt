@@ -35,6 +35,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -96,22 +97,39 @@ private object Neo {
 }
 
 class MainActivity : ComponentActivity() {
+    companion object {
+        private var current = java.lang.ref.WeakReference<MainActivity>(null)
+        internal fun exitFromConnect(): Boolean {
+            val activity = current.get() ?: return false
+            activity.exitToHome()
+            return true
+        }
+    }
     private var activeUi: ReceiverUi? = null
     private var exitPressedAt = -1L
     private var exitHint: Toast? = null
     private fun resetExit() { exitPressedAt = -1L; exitHint?.cancel(); exitHint = null }
     private var wasStopped = false
-    override fun onResume() { super.onResume(); resetExit(); if (wasStopped) activeUi?.onForeground(); wasStopped = false }
+    private fun exitToHome() {
+        resetExit(); activeUi?.pausePlayback()
+        Log.i("NeoExit", "home_requested")
+        startActivity(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+        finishAndRemoveTask()
+    }
+    override fun onResume() {
+        super.onResume(); resetExit()
+        val returned = com.metrixneo.tv.connect.NeoConnect.returnBackAt
+        com.metrixneo.tv.connect.NeoConnect.returnBackAt = -1L
+        if (returned >= 0L && SystemClock.elapsedRealtime() - returned in 0L..2000L) exitPressedAt = returned
+        if (wasStopped) activeUi?.onForeground()
+        wasStopped = false
+    }
     override fun onStop() { resetExit(); wasStopped = true; activeUi?.onBackground(); super.onStop() }
     private fun exitOrBack() {
         val ui = activeUi ?: return
         val now = SystemClock.elapsedRealtime()
         if (exitPressedAt >= 0L && now - exitPressedAt in 0L..2000L) {
-            resetExit()
-            ui.pausePlayback()
-            Log.i("NeoExit", "home_requested")
-            startActivity(Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-            finishAndRemoveTask()
+            exitToHome()
         } else {
             exitPressedAt = now
             ui.back()
@@ -122,6 +140,7 @@ class MainActivity : ComponentActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        current = java.lang.ref.WeakReference(this)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setContent {
             val scope = rememberCoroutineScope()
@@ -132,6 +151,10 @@ class MainActivity : ComponentActivity() {
             BackHandler { exitOrBack() }
             MaterialTheme(colorScheme = darkColorScheme(primary = Neo.cyan, background = Neo.bg, surface = Neo.panel)) { Screen(ui) }
         }
+    }
+    override fun onDestroy() {
+        if (current.get() === this) current.clear()
+        super.onDestroy()
     }
 }
 
@@ -1183,6 +1206,7 @@ private fun time(seconds: Long) = if (seconds <= 0) "--:--" else SimpleDateForma
     }
 }
 @Composable private fun Settings(s: ReceiverUi) {
+    val context = LocalContext.current
     val playerFocus = remember { FocusRequester() }
     LaunchedEffect(Unit) { playerFocus.requestFocus() }
     var host by remember(s.settings) { mutableStateOf(s.settings.host) }; var port by remember(s.settings) { mutableStateOf(s.settings.port.toString()) }
@@ -1201,6 +1225,9 @@ private fun time(seconds: Long) = if (seconds <= 0) "--:--" else SimpleDateForma
                             .border(3.dp, if (focused) Neo.white else Color.Transparent, RoundedCornerShape(38.dp))) {
                         TextLine(engine + if (s.engine == engine) "  ✓" else "", 27)
                     }
+                }
+                Button(onClick = { context.startActivity(Intent(context, com.metrixneo.tv.connect.NeoConnectActivity::class.java)) }, modifier = Modifier.testTag("neo.connect.open")) {
+                    TextLine("Neo Connect", 27)
                 }
             }
             Spacer(Modifier.height(22.dp))

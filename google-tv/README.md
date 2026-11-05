@@ -1,5 +1,9 @@
 # Metrix NEO AI — Google TV
 
+Version actuelle : **0.9.0 alpha (code 23)**. [Neo Connect](NEOCONNECT.md) ajoute WireGuard intégré à Neo Android et un plugin Vu+ natif en espace utilisateur, sans application VPN séparée ni relais cloud. Installation du plugin explicitement autorisée et association/tunnel/API réellement vérifiés sur Sony → Vu+ en LAN. APK également installée sur TCL ; tunnel TCL et accès 4G/5G non encore vérifiés. Routeur déclaré : Orange / ZTE, modèle exact et adresse WAN inconnus. Aucun réglage du routeur modifié.
+
+Validation de cette version : 34 tests JVM réussis, lint release sans erreur (21 avertissements), 4 tests Go réussis, 16 tests Python réussis sur le Vu+. [Rapport](reports/neoconnect-2026-11-05.json), [construction du plugin](receiver-plugin/README.md). Les validations vidéo de 0.8.3 ci-dessous restent historiques ; elles n'ont pas été répétées pour 0.9.0.
+
 Application native Android TV / Google TV. La version 0.4 remplace le tableau de bord alpha par le parcours MetrixNEO du Vu+ : menu principal, liste compacte de 20 chaînes, détails EPG, bouquets et infobar.
 
 ## Source de vérité

@@ -1,4 +1,14 @@
-# Statut 0.8.3 alpha — 2 novembre 2026
+# Statut 0.9.0 alpha — 5 novembre 2026
+
+## Neo Connect intégré
+
+Code 23 signé et installé sur Sony et TCL. Le moteur natif Android est réellement chargé sur la Sony. Association HTTPS épinglée, consentement VPN, échange WireGuard authentifié, réponse OpenWebif dans le tunnel, arrêt du service, profil chiffré persistant et double Retour vers Google TV : quinze contrôles Sony réussis. La TCL est devenue indisponible avant le test du tunnel ; aucune validation distante/vidéo/4K nouvelle n'est revendiquée.
+
+Plugin 0.1.0 installé sur le Vu+ avec exception explicitement autorisée par l'utilisateur à la règle initiale de lecture seule. Moteur Go ARMv7 en espace utilisateur ; aucun module noyau, règle réseau hôte, réglage OpenWebif, autre paquet ou routeur modifié. Le contrôleur et le moteur installés fonctionnent dans le test réel ; leur écran graphique Enigma2 n'a pas été observé. Tunnel arrêté après l'essai.
+
+34 tests JVM réussis ; lint release : zéro erreur, 21 avertissements ; quatre tests Go réussis ; seize tests Python réussis sur le Vu+ (quinze réussis et un ignoré sur Windows). IPK déterministe, sans scripts d'installation, permissions des clés vérifiées sur le récepteur. Orange / ZTE déclaré ; modèle précis, connectivité WAN, redirection et test 4G/5G restent à établir. Détails et preuves : [NEOCONNECT.md](NEOCONNECT.md) et [rapport](reports/neoconnect-2026-11-05.json).
+
+## Historique 0.8.3 et versions antérieures
 
 ## Vérification TCL et Sony — 3 novembre 2026
 

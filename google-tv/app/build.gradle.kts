@@ -13,8 +13,8 @@ android {
         applicationId = "com.metrixneo.tv"
         minSdk = 26
         targetSdk = 35
-        versionCode = 22
-        versionName = "0.8.3-alpha"
+        versionCode = 23
+        versionName = "0.9.0-alpha"
         ndk { abiFilters.addAll(gstAbis) }
         externalNativeBuild {
             ndkBuild {
@@ -37,6 +37,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions { jvmTarget = "17" }
     packaging { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
@@ -68,6 +69,8 @@ val prepareGStreamerSupport = tasks.register("prepareGStreamerSupport") {
 }
 tasks.named("preBuild") { dependsOn(prepareGStreamerSupport) }
 dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+    implementation("com.wireguard.android:tunnel:1.0.20260102")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.json:json:20240303")
     implementation(platform("androidx.compose:compose-bom:2025.04.00"))

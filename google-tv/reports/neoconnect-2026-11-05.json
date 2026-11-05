@@ -1,0 +1,156 @@
+{
+  "date": "2026-11-05",
+  "android": {
+    "version": "0.9.0-alpha",
+    "version_code": 23,
+    "jvm": {
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "variant": "debug"
+    },
+    "lint": {
+      "Warning": 21
+    },
+    "signature": "Existing local development identity; not a Play publishing key",
+    "apk_bytes": 33246287,
+    "apk_sha256": "255a0c235907edfef873d0ee86f74c653f5a73083dbe94d90c237e6093f1f029",
+    "installed_on": [
+      "Sony BRAVIA VU3 Android 14 ARMv7",
+      "TCL Android 14 ARMv7"
+    ]
+  },
+  "receiver": {
+    "model": "Vu+ Zero 4K",
+    "image": "OpenATV 8.0.1.20261003",
+    "kernel": "4.1.20-1.9",
+    "python": "3.14.7",
+    "explicit_install_test_exception_authorized": true,
+    "package_version": "0.1.0",
+    "architecture": "vuzero4k",
+    "installed": true,
+    "other_packages_installed_or_upgraded": false,
+    "host_network_kernel_openwebif_router_changes": false,
+    "arm_binary_version_executed": true,
+    "private_directory_mode": "0700",
+    "private_file_modes": "0600",
+    "ipk_sha256": "bc18d020e60bea229e9e402a9edd04e68a5714cddde15f8f68a90e1d18c7a9ad",
+    "ipk_bytes": 2567818,
+    "arm_endpoint_sha256": "51854731ff7a309bc9051b15e3d7a01739216630619d960d4693a9f658a365c5",
+    "deterministic_ipk_rebuild": true,
+    "installation_scripts": false,
+    "package_files_restricted_to_owned_paths": true,
+    "go_tests": {
+      "passed": 4,
+      "includes_real_encrypted_tunnel_port_scope_and_revocation": true
+    },
+    "python_tests_on_receiver": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    },
+    "python_tests_windows": {
+      "passed": 15,
+      "failed": 0,
+      "skipped_posix_only": 1
+    },
+    "graphical_enigma2_screen_verified": false
+  },
+  "sony": {
+    "checks": [
+      {
+        "name": "Neo Connect screen opens",
+        "passed": true
+      },
+      {
+        "name": "Native WireGuard version call succeeds on the TV",
+        "passed": true
+      },
+      {
+        "name": "Opening settings does not automatically start VPN",
+        "passed": true
+      },
+      {
+        "name": "D-pad can focus an enabled action",
+        "passed": true
+      },
+      {
+        "name": "Receiver TLS fingerprint matches the trusted reference",
+        "passed": true
+      },
+      {
+        "name": "Pairing creates a local encrypted profile",
+        "passed": true
+      },
+      {
+        "name": "Android consent dialog belongs to the VPN request",
+        "passed": true
+      },
+      {
+        "name": "Real WireGuard authenticated exchange is reported",
+        "passed": true
+      },
+      {
+        "name": "OpenWebif actually responds inside the tunnel",
+        "passed": true
+      },
+      {
+        "name": "Disconnect returns to the stopped state",
+        "passed": true
+      },
+      {
+        "name": "Disconnect stops the owned foreground service",
+        "passed": true
+      },
+      {
+        "name": "Neo Connect screen opens",
+        "passed": true
+      },
+      {
+        "name": "Encrypted profile survives process recreation",
+        "passed": true
+      },
+      {
+        "name": "Single Back restores Neo Setup",
+        "passed": true
+      },
+      {
+        "name": "Two separate Back presses return to TV Home",
+        "passed": true
+      }
+    ],
+    "scope": "Actual Android UI, embedded native load and optional receiver tunnel handshake/API; no mobile network or video fluidity claim.",
+    "version": "0.9.0-alpha",
+    "tunnel_api_verified_on_lan": true,
+    "final_component": "com.google.android.apps.tv.launcherx/.home.HomeActivity",
+    "passed": true
+  },
+  "tcl": {
+    "new_apk_installed": true,
+    "tunnel_verified": false,
+    "reason": "Device unavailable after installation; only Sony remained in ADB inventory"
+  },
+  "cleanup": {
+    "sony_vpn_service_stopped": true,
+    "receiver_test_runtime_stopped_exit": 0,
+    "receiver_ports_51820_9843_no_longer_listening": true,
+    "own_receiver_test_files_removed": true
+  },
+  "internet": {
+    "isp_user_reported": "Orange",
+    "router_brand_user_reported": "ZTE",
+    "exact_model_country_public_wan_cgnat": "Unknown",
+    "gateway_unauthenticated_http_https_identification": "No response",
+    "router_changed": false,
+    "mobile_network_tested": false,
+    "endpoint_used_for_actual_test": "LAN receiver IP, not a public Internet endpoint"
+  },
+  "limits": [
+    "No 4G/5G or external reachability validation",
+    "No new video or 4K/HDR fluidity claim",
+    "No TCL tunnel validation",
+    "No on-screen Enigma2 plugin GUI validation",
+    "Provider-direct IPTV URLs remain outside the receiver-only VPN route"
+  ]
+}

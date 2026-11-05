@@ -1,0 +1,11 @@
+Neo Connect uses the official WireGuard Android tunnel library 1.0.20260102.
+Copyright WireGuard LLC and contributors. Apache License 2.0.
+Sources: https://git.zx2c4.com/wireguard-android/
+Embedding: https://www.wireguard.com/embedding/
+
+The library includes wireguard-go (MIT) and Go components (BSD).
+Copies of their licenses are in assets/licenses/WireGuard-Android-Apache2.txt,
+WireGuard-Go-MIT.txt, Go-BSD.txt and Go-Crypto-BSD.txt.
+
+No WireGuard vendor account or hosted coordination service is used by Neo Connect.
+The Android VPN authorization is requested only on the user's Connect action.
