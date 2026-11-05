@@ -21,7 +21,9 @@ Le moteur ne démarre pas à l'installation ni automatiquement au redémarrage d
 
 ## Accès Orange hors domicile : étape restante
 
-L'opérateur déclaré est Orange et la marque du routeur ZTE ; le pays, le modèle exact et le statut de l'adresse WAN restent inconnus. Sa page locale n'a pas répondu à la lecture HTTP/HTTPS de cette session. Il faut une adresse publique entrante joignable et une redirection **UDP 51820 uniquement** vers l'IP fixe du Vu+. Ne pas publier OpenWebif (82 ici), les ports vidéo 8001/8002 ou l'association HTTPS 9843.
+Le routeur est désormais identifié par la capture utilisateur : **Orange Maroc, ZTE ZXHN F6600P**, firmware `ZTEGF660010MA`. L'adresse WAN affichée appartient à une plage IPv4 publique ; cela ne prouve pas l'accessibilité entrante. La page locale HTTPS répond et affiche le modèle F6600P ; le premier échec était dû à son certificat auto-signé. Aucun compte administrateur, menu de redirection ni réglage WAN n'a encore été consulté. Voir [la règle préparée et les vérifications restantes](NEOCONNECT_ORANGE_ZTE.md).
+
+Il faut une adresse publique entrante joignable et une redirection **UDP 51820 uniquement** vers l'IP fixe du Vu+. Ne pas publier OpenWebif (82 ici), les ports vidéo 8001/8002 ou l'association HTTPS 9843.
 
 Avec une IPv4 publique dynamique, modifier la terminaison dans Neo pendant que le tunnel est arrêté lorsque l'adresse change ; un nom DNS personnel est aussi accepté. Une IPv6 publique joignable peut être utilisée sous la forme `[adresse]:51820`, sous réserve du réseau et du pare-feu du routeur. Aucune de ces variantes n'a été testée ici. Sous CGNAT sans connectivité entrante, ce serveur direct seul ne peut pas rendre le domicile accessible ; il faut obtenir une adresse entrante de l'opérateur ou changer d'architecture. Le plugin ne contourne pas cette contrainte.
 
