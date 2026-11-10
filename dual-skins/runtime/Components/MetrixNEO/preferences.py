@@ -9,6 +9,7 @@ CATEGORIES = (("presentation", "Présentation"), ("weather", "Météo"),
               ("diagnostics", "Diagnostics"), ("cache", "Cache"))
 # key, label, editor type, category, contextual help
 OPTIONS = (
+    ("volume_style", "Style du volume", "selection", "presentation", "Gauche / droite pour parcourir les styles. La touche verte enregistre le choix."),
     ("compact", "Liste Advanced compacte", "bool", "presentation", "Disposition compacte de la liste Advanced. Prise en compte à la prochaine ouverture de la liste, en mode de modèles natifs."),
     ("large_text", "Agrandir le texte de cet aperçu", "bool", "presentation", "Agrandit uniquement l’exemple à droite. Les polices des autres écrans ne sont pas modifiées."),
     ("weather", "Afficher la météo sur trois jours", "bool", "weather", "Nécessite le helper, les coordonnées et le consentement réseau. Sans données, la météo reste masquée."),
@@ -30,7 +31,8 @@ def options_for(profile, category=None):
     if profile not in PROFILES:
         raise ValueError("Unknown skin identity")
     return tuple(item for item in OPTIONS if (category is None or item[3] == category)
-                 and (item[0] not in ("compact", "smart_epg", "diagnostics") or profile == "MetrixNEOAdvanced"))
+                 and (item[0] not in ("compact", "smart_epg", "diagnostics") or profile == "MetrixNEOAdvanced")
+                 and (item[0] != "volume_style" or profile == "MetrixNEO"))
 
 
 def categories_for(profile):

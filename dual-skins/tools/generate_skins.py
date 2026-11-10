@@ -254,6 +254,8 @@ def settings(root, profile, advanced):
     widget(own, "405,205", "960,640", name="config", render="Listbox", font="Regular;26", itemHeight="64", scrollbarMode="showOnDemand", backgroundColor="panel", backgroundColorSelected="selection", foregroundColor="foreground")
     widget(own, "1420,205", "440,310", name="description", font=24, foregroundColor="muted")
     widget(own, "1420,550", "440,330", name="preview", font=26)
+    if not advanced:
+        widget(own, "1405,550", "460,64", name="volumePreview", render="Pixmap", alphatest="blend", zPosition="3")
     widget(own, "48,930", "1790,50", name="footnote", font=24, foregroundColor="muted")
     footer(own)
 
@@ -274,9 +276,17 @@ def dialogs(root, profile, advanced):
     widget(message, "34,35", "64,64", name="icon", render="Pixmap", conditional="icon", pixmaps=",".join(profile + "/assets/" + icon + ".png" for icon in ("question", "info", "warning", "error", "info")), alphatest="blend")
     widget(message, "130,40", "950,320", name="text", font=30)
     widget(message, "40,385", "1030,130", name="list", render="Listbox", conditional="list", font="Regular;28", itemHeight="48", backgroundColor="panel", backgroundColorSelected="selection", foregroundColor="foreground")
-    volume = screen(root, "Volume", size="600,80", position="660,70")
-    label(volume, "VOL", "22,18", "90,44", 25)
-    widget(volume, "125,26", "440,24", name="Volume", render="Progress", foregroundColor="accent", backgroundColor="secondary", borderWidth="0")
+    if advanced:
+        volume = screen(root, "Volume", size="600,80", position="660,70")
+        label(volume, "VOL", "22,18", "90,44", 25)
+        widget(volume, "125,26", "440,24", name="Volume", render="Progress", foregroundColor="accent", backgroundColor="secondary", borderWidth="0")
+    else:
+        volume = screen(root, "Volume", size="460,64", position="730,75", bg="transparent")
+        assets = profile + "/assets/launcher/"
+        sub(volume, "ePixmap", position="18,16", size="32,32", pixmap=assets + "volume-speaker.png", alphatest="blend", scale="stretch", zPosition="2")
+        widget(volume, "66,28", "318,8", name="Volume", render="Progress", pixmap=assets + "volume-gradient.png", foregroundColor="accent", backgroundColor="track", borderWidth="0", zPosition="2")
+        widget(volume, "396,12", "50,40", name="VolumeText", font="MenuTitle;28", halign="right", valign="center", conditional="VolumeText", zPosition="2")
+        applet(volume, "volume_display", "bind_volume", profile)
     mute = screen(root, "Mute", size="250,66", position="835,70")
     label(mute, "MUET / MUTE", "14,15", "224,42", 26)
 

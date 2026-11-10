@@ -10,7 +10,7 @@ from unittest.mock import Mock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "runtime"))
-from Components.MetrixNEO.settings import DEFAULTS, Settings
+from Components.MetrixNEO.settings import DEFAULTS, VOLUME_STYLES, Settings
 from Components.MetrixNEO.preferences import KEY_LABELS, categories_for
 
 
@@ -31,6 +31,12 @@ class Label:
 
     def setText(self, text):
         self.text = text
+
+    def hide(self):
+        self.visible = False
+
+    def show(self):
+        self.visible = True
 
 
 class Actions:
@@ -86,9 +92,10 @@ class PreferencesActions(unittest.TestCase):
         definitions = {
             "Components.ActionMap": {"ActionMap": Actions},
             "Components.ConfigList": {"ConfigListScreen": ConfigListScreen},
-            "Components.config": {"ConfigInteger": Editor, "ConfigText": Text, "ConfigPassword": Text, "ConfigYesNo": Editor, "NoSave": lambda editor: editor, "getConfigListEntry": lambda *args: args},
+            "Components.config": {"ConfigInteger": Editor, "ConfigSelection": Editor, "ConfigText": Text, "ConfigPassword": Text, "ConfigYesNo": Editor, "NoSave": lambda editor: editor, "getConfigListEntry": lambda *args: args},
             "Components.Label": {"Label": Label},
             "Components.MenuList": {"MenuList": Listing},
+            "Components.Pixmap": {"Pixmap": Label},
             "Components.Sources.StaticText": {"StaticText": Label},
             "Screens.Screen": {"Screen": Screen},
             "Screens.MessageBox": {"MessageBox": types.SimpleNamespace(TYPE_ERROR=1, TYPE_INFO=2)},
@@ -144,6 +151,23 @@ class PreferencesActions(unittest.TestCase):
         self.assertFalse({"compact", "smart_epg", "diagnostics"} & screen.fields.keys())
         screen.category_selected(("Diagnostics", "diagnostics"))
         self.assertEqual(screen.category, "presentation")
+
+    def test_volume_style_previews_and_saves_only_for_metrix_neo(self):
+        self.assertNotIn("volume_style", self.screen().fields)
+        screen = self.screen("MetrixNEO")
+        self.assertEqual(screen.fields["volume_style"].value, "classic")
+        preview = screen["volumePreview"]
+        preview.instance = Mock()
+        with patch.object(self.ui, "load_volume_art", return_value="preview") as load:
+            for style, _ in VOLUME_STYLES:
+                screen.fields["volume_style"].value = style
+                screen.preview()
+                load.assert_called_with(style, "preview.png")
+                self.assertTrue(preview.visible)
+                self.assertFalse(screen["preview"].visible)
+        self.assertEqual(list(self.root.iterdir()), [])
+        screen.save()
+        self.assertEqual(Settings(self.root, "MetrixNEO").saved["volume_style"], "lens")
 
     def test_yellow_resets_all_categories_in_memory_then_cancel_keeps_saved(self):
         saved = Settings(self.root, "MetrixNEOAdvanced")

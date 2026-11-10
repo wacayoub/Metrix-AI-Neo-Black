@@ -1,10 +1,13 @@
 # Metrix NEO et Metrix NEO Advanced
 
+La version **0.2.0** ajoute cinq styles de volume à Metrix NEO. Dans
+**Préférences → Présentation → Style du volume**, les flèches affichent un
+aperçu du style et la touche verte enregistre le choix.
+
 Deux skins FHD distincts pour **OpenATV**, destinés au Vu+ Zero 4K sous OpenATV
-8.0.1. Livraison locale de développement `0.1.0` : **NOT_INSTALLED**.
-Tous les menus des deux thèmes sont validés visuellement par l’utilisateur le
-25 octobre 2026. La compatibilité et le rendu natif sur votre appareil restent
-à vérifier. Aucun accès ni changement du Vu+ n’a été effectué.
+8.0.1. Le choix et l’affichage des styles de volume ont été vérifiés sur un Vu+
+Zero 4K. Les paquets générés à partir de cette branche sont validés hors
+récepteur.
 
 | | Metrix NEO | Metrix NEO Advanced |
 |---|---|---|
@@ -102,12 +105,9 @@ Voir [format du catalogue](docs/OPTIONAL_MODULES.md).
 
 ## GitHub
 
-Arborescence, exclusions, CI et modèle de ticket prêts. Dépôt Git local initialisé.
-Le projet existant [wacayoub/Metrix-AI-Neo-Black](https://github.com/wacayoub/Metrix-AI-Neo-Black)
-a été retrouvé et audité en lecture seule. Un patch d’intégration place ce
-nouveau projet dans `dual-skins/` en conservant les anciens scripts, le README et
-les manifestes de mise à jour. Aucune publication distante n’a été effectuée.
-Voir [préparation GitHub](docs/GITHUB_PREPARATION.md).
+Le code des skins est publié dans `dual-skins/` sur la branche
+`codex/metrix-neo-dual-skins`. La CI construit les paquets IPK et le ZIP des
+sources. [Dépôt GitHub](https://github.com/wacayoub/Metrix-AI-Neo-Black/tree/codex/metrix-neo-dual-skins/dual-skins)
 
 ## Licence
 

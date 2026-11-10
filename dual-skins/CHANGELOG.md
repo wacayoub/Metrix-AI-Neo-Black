@@ -1,3 +1,11 @@
+# 0.2.0 — 2026-11-10
+
+- Metrix NEO affiche le volume dans un bandeau horizontal de 460 × 64 px.
+- Dans **Préférences → Présentation → Style du volume**, les flèches
+  permettent de prévisualiser Chiffre liquide, Prisme, Trame lumineuse,
+  Ruban plié et Lentille. La touche verte enregistre le style, appliqué au
+  prochain réglage du volume. Le style Classique est sélectionné par défaut.
+
 # 0.1.0 — livraison préparée, 2026-10-25
 
 - Tous les menus des deux thèmes validés visuellement par l’utilisateur.

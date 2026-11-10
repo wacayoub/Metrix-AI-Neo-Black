@@ -1,12 +1,14 @@
 """Native cancellable preferences; only the green key saves the NEO profile."""
 from Components.ActionMap import ActionMap
 from Components.ConfigList import ConfigListScreen
-from Components.config import ConfigInteger, ConfigPassword, ConfigText, ConfigYesNo, NoSave, getConfigListEntry
+from Components.config import ConfigInteger, ConfigPassword, ConfigSelection, ConfigText, ConfigYesNo, NoSave, getConfigListEntry
 from Components.Label import Label
 from Components.MenuList import MenuList
+from Components.Pixmap import Pixmap
 from Components.Sources.StaticText import StaticText
 from Screens.Screen import Screen
-from Components.MetrixNEO.settings import Settings, validate
+from Components.MetrixNEO.settings import Settings, VOLUME_STYLES, validate
+from Components.MetrixNEO.volume_display import load_volume_art
 from Components.MetrixNEO.preferences import KEY_LABELS, NAVIGATION, categories_for, options_for, preview_text
 
 
@@ -20,6 +22,9 @@ class NeoSettings(Screen, ConfigListScreen):
         for key, label in KEY_LABELS.items():
             self[key] = StaticText(label)
         self["preview"] = Label()
+        if profile == "MetrixNEO":
+            self["volumePreview"] = Pixmap()
+            self["volumePreview"].hide()
         self["description"] = Label()
         self["footnote"] = Label(NAVIGATION)
         self.categories = categories_for(profile)
@@ -32,6 +37,8 @@ class NeoSettings(Screen, ConfigListScreen):
                 editor = ConfigYesNo(default=value)
             elif kind == "integer":
                 editor = ConfigInteger(default=value, limits=(1, 128))
+            elif kind == "selection":
+                editor = ConfigSelection(default=value, choices=VOLUME_STYLES)
             elif kind == "password":
                 editor = ConfigPassword(default=value, fixed_size=False)
             else:
@@ -76,9 +83,25 @@ class NeoSettings(Screen, ConfigListScreen):
         self["preview"].setText(preview_text(large))
         current = self["config"].getCurrent()
         self["description"].setText(current[2] if current and len(current) > 2 else "")
+        self.preview_volume(current)
         if self["preview"].instance is not None:
             from enigma import gFont
             self["preview"].instance.setFont(gFont("Regular", 32 if large else 26))
+
+    def preview_volume(self, current):
+        if self.profile != "MetrixNEO":
+            return
+        preview = self["volumePreview"]
+        style = self.fields["volume_style"]
+        if preview.instance is not None and current and current[1] is style:
+            pixmap = load_volume_art(style.value, "preview.png")
+            if pixmap is not None:
+                preview.instance.setPixmap(pixmap)
+                preview.show()
+                self["preview"].hide()
+                return
+        preview.hide()
+        self["preview"].show()
 
     def defaults(self):
         self.store.reset_preview()

@@ -6,12 +6,21 @@ import tempfile
 from pathlib import Path
 
 PROFILES = ("MetrixNEO", "MetrixNEOAdvanced")
+VOLUME_STYLES = (
+    ("classic", "Classique"),
+    ("liquid", "Chiffre liquide"),
+    ("prism", "Prisme"),
+    ("matrix", "Trame lumineuse"),
+    ("fold", "Ruban plié"),
+    ("lens", "Lentille"),
+)
 DEFAULTS = {
     "weather": False, "posters": False, "smart_epg": True, "diagnostics": True,
     "compact": False, "large_text": False, "latitude": None, "longitude": None,
     "cache_mb": 32, "weather_ttl": 3600, "poster_ttl": 604800,
     "network_consent": False,
     "weather_label": "",
+    "volume_style": "classic",
     "club_logos": False, "club_network_consent": False, "sports_api_key": "123",
 }
 
@@ -21,6 +30,8 @@ def validate(data):
         raise ValueError("Unknown NEO setting")
     result = copy.deepcopy(DEFAULTS)
     result.update(data)
+    if not isinstance(result["volume_style"], str) or result["volume_style"] not in dict(VOLUME_STYLES):
+        raise ValueError("volume_style")
     if not isinstance(result["weather_label"], str) or len(result["weather_label"]) > 48:
         raise ValueError("weather_label")
     if not isinstance(result["sports_api_key"],str) or not (1 <= len(result["sports_api_key"]) <= 64 and result["sports_api_key"].isascii() and result["sports_api_key"].isdigit()):

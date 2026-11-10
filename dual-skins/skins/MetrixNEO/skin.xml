@@ -1021,6 +1021,7 @@
     <widget position="405,205" size="960,640" name="config" font="Regular;26" itemHeight="64" scrollbarMode="showOnDemand" backgroundColor="panel" backgroundColorSelected="classic_menu_selected_top,classic_menu_selected_mid,classic_menu_selected_bottom,vertical" foregroundColor="foreground" foregroundColorSelected="foreground" />
     <widget position="1420,205" size="440,310" name="description" font="Regular;24" foregroundColor="muted" backgroundColor="background" transparent="1" />
     <widget position="1420,550" size="440,330" name="preview" font="Regular;26" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+    <widget position="1405,550" size="460,64" name="volumePreview" alphatest="blend" zPosition="3" />
     <widget position="48,930" size="1790,50" name="footnote" font="Regular;24" foregroundColor="muted" backgroundColor="background" transparent="1" />
     <widget position="48,1015" size="5,30" source="key_red" render="Label" font="Regular;1" foregroundColor="red" backgroundColor="red" transparent="0" conditional="key_red">
       <convert type="ConditionalShowHide" />
@@ -1056,9 +1057,12 @@
     <widget position="130,40" size="950,320" name="text" font="Regular;30" foregroundColor="foreground" backgroundColor="background" transparent="1" />
     <widget position="40,385" size="1030,130" name="list" font="Regular;28" conditional="list" itemHeight="48" backgroundColor="panel" backgroundColorSelected="classic_menu_selected_top,classic_menu_selected_mid,classic_menu_selected_bottom,vertical" foregroundColor="foreground" foregroundColorSelected="foreground" />
   </screen>
-  <screen name="Volume" position="660,70" size="600,80" backgroundColor="background" flags="wfNoBorder">
-    <eLabel text="VOL" position="22,18" size="90,44" font="Regular;25" foregroundColor="foreground" backgroundColor="background" transparent="1" />
-    <widget position="125,26" size="440,24" name="Volume" foregroundColor="accent" backgroundColor="secondary" borderWidth="0" />
+  <screen name="Volume" position="730,75" size="460,64" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="18,16" size="32,32" pixmap="MetrixNEO/assets/launcher/volume-speaker.png" alphatest="blend" scale="stretch" zPosition="2" />
+    <widget position="66,28" size="318,8" name="Volume" pixmap="MetrixNEO/assets/launcher/volume-gradient.png" foregroundColor="accent" backgroundColor="track" borderWidth="0" zPosition="2" />
+    <widget position="396,12" size="50,40" name="VolumeText" font="MenuTitle;28" foregroundColor="foreground" backgroundColor="background" transparent="1" halign="right" valign="center" conditional="VolumeText" zPosition="2" />
+    <applet type="onLayoutFinish">from Components.MetrixNEO.volume_display import bind_volume
+bind_volume(self, 'MetrixNEO')</applet>
   </screen>
   <screen name="Mute" position="835,70" size="250,66" backgroundColor="background" flags="wfNoBorder">
     <eLabel text="MUET / MUTE" position="14,15" size="224,42" font="Regular;26" foregroundColor="foreground" backgroundColor="background" transparent="1" />

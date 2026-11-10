@@ -11,7 +11,7 @@ from generate_skins import ROOT, TOKENS
 
 sys.path.insert(0, str(ROOT / "runtime"))
 from Components.MetrixNEO.preferences import KEY_LABELS, NAVIGATION, categories_for, options_for, preview_text
-from Components.MetrixNEO.settings import DEFAULTS
+from Components.MetrixNEO.settings import DEFAULTS, VOLUME_STYLES
 from Components.MetrixNEO.infobar_icons import icon_name
 
 COLORS = {key: "#" + value[-6:] for key, value in TOKENS.items()}
@@ -344,7 +344,18 @@ def render(profile, screen_name, category="presentation"):
                     text_box(draw, (x + 14, ty + 14, width - 28, row - 18), text, 28, COLORS["foreground"] if key == category else COLORS["muted"])
             elif node.get("name") == "config" and screen_name in ("Setup", "MetrixNEOSettings"):
                 if screen_name == "MetrixNEOSettings":
-                    rows = [(label, "••••" if kind=="password" else "Oui" if DEFAULTS[key] is True else "Non" if DEFAULTS[key] is False else "" if DEFAULTS[key] is None else str(DEFAULTS[key])) for key, label, kind, section, description in options_for(profile, category)]
+                    rows = []
+                    for key, label, kind, _, _ in options_for(profile, category):
+                        value = DEFAULTS[key]
+                        if key == "volume_style":
+                            display = dict(VOLUME_STYLES)[value]
+                        elif kind == "password":
+                            display = "••••"
+                        elif isinstance(value, bool):
+                            display = "Oui" if value else "Non"
+                        else:
+                            display = "" if value is None else str(value)
+                        rows.append((label, display))
                 else:
                     # These are actual OpenATV Audio setup labels; the audited French
                     # PO leaves these three untranslated, so the native fallback is EN.
